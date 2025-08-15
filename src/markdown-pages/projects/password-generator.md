@@ -5,7 +5,7 @@ title: "Password Generator"
 added: "2025-08-15"
 listName: "🔐 /Password-Generator"
 video: "false"
-popupImageSrc: "https://raw.githubusercontent.com/ROSHAN-Z89/Port-Scanner/main/portscanner.png"
+popupImageSrc: "https://github.com/ROSHAN-Z89/PassGenerator/blob/main/passgenerator.png?raw=true"
 popupImageAlt: "Password Generator GUI screenshot"
 popupGithubLink: "https://github.com/ROSHAN-Z89/password-generator-gui"
 techIcons: [
@@ -29,3 +29,4 @@ techIcons: [
 - 📄 **Easy Copy Output**: Generated passwords appear in a text box for quick copying.  
 
 - 🔐 **Secure & Random**: Uses Python’s randomization for strong password generation.  
+

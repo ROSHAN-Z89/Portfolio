@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roshan Das | Cybersecurity Professional Portfolio</title>
+
+    <meta name="description"
+        content="Cybersecurity professional specializing in ethical hacking, penetration testing, and secure application development. Available for opportunities in India.">
+    <meta name="keywords"
+        content="cybersecurity, ethical hacking, penetration testing, web security, full-stack developer, OWASP, security researcher">
+    <meta name="author" content="Roshan Das">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-theme">
+
+    <div id="terminal-loader" class="terminal-loader">
+        <div class="terminal-content">
+            <div class="terminal-header">
+                <div class="terminal-title">ROSHAN-PORTFOLIO:~$</div>
+                <button id="skip-loader" class="skip-button" tabindex="0">Skip</button>
+            </div>
+            <div class="terminal-output" id="terminal-output">
+
+            </div>
+        </div>
+
+        <div id="loader-announcer" class="sr-only" aria-live="polite"></div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="terminal-icon"><a href="#home" data-section="home">HACKER</a></span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active" data-section="home">HOME</a>
+                <a href="#about" class="nav-link" data-section="about">ABOUT</a>
+                <a href="#skills" class="nav-link" data-section="skills">SKILLS</a>
+                <a href="#projects" class="nav-link" data-section="projects">PROJECTS</a>
+                <a href="#blog" class="nav-link" data-section="blog">BLOG</a>
+            </div>
+            
+            <div class="nav-controls">
+                <div class="theme-toggle" id="theme-toggle" title="Switch theme">
+                    <div class="theme-toggle-slider">
+                        <span class="theme-icon"></span>
+                    </div>
+                </div>
+                
+                <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+
+        <section id="home" class="section active">
+
+            <canvas id="matrixCanvas" class="matrix-canvas"></canvas>
+            <div class="matrix-overlay"></div>
+
+            <div class="hero-container fade-in-up">
+                <div class="hero-content">
+                    <div class="hero-name">
+                        <span class="name-text">ROSHAN DAS</span>
+
+                          <!-- NEW: Social Media Links -->
+                        <div class="hero-social-links">
+                            <a href="mailto:rouson.ece@gmail.com" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="Email">
+                                <img src="./assets/socials/mail.svg" alt="Email" class="hero-social-icon">
+                            </a>
+                            <a href="https://github.com/ROSHAN-Z89" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="GitHub">
+                                <img src="./assets/socials/github.svg" alt="GitHub" class="hero-social-icon">
+                            </a>
+                            <a href="https://linkedin.com/in/rouson-das-563b52284" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="LinkedIn">
+                                <img src="./assets/socials/linkedin.svg" alt="LinkedIn" class="hero-social-icon">
+                            </a>
+                            <a href="https://linktr.ee/DR05HAN_27" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="Linktree">
+                                <img src="./assets/socials/linktree.svg" alt="Linktree" class="hero-social-icon">
+                            </a>
+                        </div>
+                        <p class="hero-subtitle">
+                            <span class="typing-text" id="typing-text"></span>
+                            <span class="cursor">|</span>
+                        </p>
+                    </div>
+                    
+                    <div class="hero-buttons">
+                        <!-- FIXED: Changed to navigate to contact -->
+                        <button class="btn btn-primary cta-button" data-section="contact">Learn With ROSHAN</button>
+                        <button class="btn btn-secondary cta-button" id="downloadResumeBtn">RESUME</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <p class="section-subtitle fade-in-up">
+                    <span id="typing-animation" class="typing-animation"></span>
+                </p>
+                <div id="about-content" class="about-fadein" style="display:none;">
+                    <div class="about-grid fade-in-up">
+                        <div class="about-card">
+                            <div class="profile-avatar">X</div>
+                            <h3 class="profile-name">ROSHAN_DAS</h3>
+                            <p class="profile-title">Security Learner <br> ECE Undergrad</p>
+                            <div class="profile-info">
+                                <p><span class="info-label">EDUCATION:</span> B.Tech ECE, MAKAUT University</p>
+                                <p><span class="info-label">GRADUATION:</span> Expected 2027</p>
+                                <p><span class="info-label">FOCUS AREAS:</span> Ethical Hacking, Web Security &
+                                    Cyber Defence
+                                </p>
+                                <p><span class="info-label">STATUS:</span> Open to Internship & Collaboration
+                                    Opportunities</p>
+                            </div>
+                        </div>
+                        <div class="about-description">
+                            <div class="glass-card">
+                                <h3>whoami_?</h3>
+                                <p>Roshan is currently pursuing his <b>B.Tech degree</b> in <b> Electronics and Communication</b>
+                                    Engineering(ECE). He is also passionate about Offensive and Defensive Security.
+                                    Roshan spends his day exploring security concepts, vulnerabilities, solve CTFs and
+                                    analyze code and make it better. He has hands-on experience in frameworks such as <b>OWASP Top 10, Sans 25.</b></p>
+                                <p> He is a participant at SIH'25, Bharatiya Antariksh Hackathon(by ISRO).</p>
+                                <p>Roshan loves to share his knowledge through blogs at <a href="https://rootiq.hashnode.dev">rootiq</a> and
+                                    documents his CTF writeups and security notes on <a href="https://github.com/ROSHAN-Z89/CTFs">GitHub</a> to help others.</p>
+                                <p>Roshan contributes beyond the tech side -> surving as a <b>Community Coordinator</b> in
+                                    the <b>Apex Circle</b>community.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title fade-in-up">TECHNICAL_EXPERTISE</h2>
+                <p class="section-subtitle fade-in-up">What Roshan knows? || What he is learning? </p>
+
+                <div class="skills-group fade-in-up">
+                </div>
+
+                <div class="skills-group fade-in-up">
+                    <h3 class="skills-group-title">SECURITY TOOLS & FRAMEWORKS</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-description="Web application security testing tool">
+                            <img src="./assets/images/burpsuite.svg" alt="Burp Suite" class="skill-icon">
+                            <span class="skill-name">BURP SUITE</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="25%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-description="Discover hosts and services on network">
+                            <img src="./assets/images/nmap.webp" alt="Nmap" class="skill-icon">
+                            <span class="skill-name">NMAP</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-description="Penetration testing framework">
+                            <img src="./assets/images/metasploit.svg" alt="Metasploit" class="skill-icon">
+                            <span class="skill-name">METASPLOIT</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-description="Network protocol analyzer">
+                            <img src="./assets/images/wireshark.png" alt="Wireshark" class="skill-icon">
+                            <span class="skill-name">WIRESHARK</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-description="Directory & DNS brute-forcing tool">
+                            <img src="./assets/images/gobuster.svg" alt="Gobuster" class="skill-icon">
+                            <span class="skill-name">GOBUSTER</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"
+                            data-description="Read/Write data across internet">
+                            <img src="./assets/images/netcat.svg" alt="Netcat" class="skill-icon">
+                            <span class="skill-name">NETCAT</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-description="Password Cracking Tool">
+                            <img src="./assets/images/hydra.svg" alt="Hydra" class="skill-icon">
+                            <span class="skill-name">HYDRA</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="30%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-description="Reverse Engineering Framework">
+                            <img src="./assets/images/ghidra.webp" alt="Ghidra" class="skill-icon">
+                            <span class="skill-name">GHIDRA</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="10%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-description="Privilege Escalation Tool">
+                            <img src="./assets/images/peas.png" alt="Peas" class="skill-icon">
+                            <span class="skill-name">PEAS</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="30%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-group fade-in-up">
+                    <h3 class="skills-group-title">CODE BASE</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-description="Markup language for web pages">
+                            <img src="./assets/images/HTML5.svg" alt="Html" class="skill-icon">
+                            <span class="skill-name">HTML5</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"
+                            data-description="Design webpage">
+                            <img src="./assets/images/CSS3.svg" alt="Css" class="skill-icon">
+                            <span class="skill-name">CSS3</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-description="Old age scripting language for web dev">
+                            <img src="./assets/images/PHP.svg" alt="Php" class="skill-icon">
+                            <span class="skill-name">PHP</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-description="Add login to web pages">
+                            <img src="./assets/images/javascript.svg" alt="JavaScript" class="skill-icon">
+                            <span class="skill-name">JAVASCRIPT</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-description="JavaScript UI framework">
+                            <img src="./assets/images/react.svg" alt="React" class="skill-icon">
+                            <span class="skill-name">REACT</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"
+                            data-description="Server-side javascript excution">
+                            <img src="./assets/images/node.svg" alt="Nodejs" class="skill-icon">
+                            <span class="skill-name">NODE</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"
+                            data-description="CSS framework, responsive UIs">
+                            <img src="./assets/images/Tailwind CSS.svg" alt="Tailwind Css" class="skill-icon">
+                            <span class="skill-name">TAILWIND CSS</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-description="API testing tool">
+                            <img src="./assets/images/Postman.svg" alt="Postman" class="skill-icon">
+                            <span class="skill-name">POSTMAN</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-description="Best scripting language">
+                            <img src="./assets/images/python.svg" alt="Python" class="skill-icon">
+                            <span class="skill-name">PYTHON</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-description="Language to write Linux">
+                            <img src="./assets/images/C.svg" alt="C" class="skill-icon">
+                            <span class="skill-name">C</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-description="Base Language for Games">
+                            <img src="./assets/images/Cplusplus.svg" alt="C++" class="skill-icon">
+                            <span class="skill-name">C++</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-description="Best choise for Application Developers">
+                            <img src="./assets/images/java.svg" alt="Java" class="skill-icon">
+                            <span class="skill-name">JAVA</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="40%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-description="Low-level machine language">
+                            <img src="./assets/images/assembly.svg" alt="Assembly" class="skill-icon">
+                            <span class="skill-name">ASSEMBLY</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="15%"></div>
+                            </div>
+
+                        </div>
+                        <div class="skill-item" data-description="Unix shell scripting language">
+                            <img src="./assets/images/bash.svg" alt="Bash" class="skill-icon">
+                            <span class="skill-name">BASH</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"
+                            data-description="Scripting language for Windows environments">
+                            <img src="./assets/images/powershell.svg" alt="PowerShell" class="skill-icon">
+                            <span class="skill-name">POWERSHELL</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-group fade-in-up">
+                    <h3 class="skills-group-title">DATABASES</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-description="Relational database management system">
+                            <img src="./assets/images/mysql.svg" alt="MySQL" class="skill-icon">
+                            <span class="skill-name">MYSQL</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-description="Relational database management system">
+                            <img src="./assets/images/postgresql.svg" alt="PostgreSQL" class="skill-icon">
+                            <span class="skill-name">POSTGRESQL</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-description="NoSQL database">
+                            <img src="./assets/images/mongo.svg" alt="MongoDB" class="skill-icon">
+                            <span class="skill-name">MONGODB</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="skills-group fade-in-up">
+                    <h3 class="skills-group-title">OPERATING SYSTEMS</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-description="Microsoft Windows">
+                            <img src="./assets/images/windows.png" alt="Windows" class="skill-icon">
+                            <span class="skill-name">WINDOWS</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-description="Linux distribution">
+                            <img src="./assets/images/ubuntu.svg" alt="Ubuntu" class="skill-icon">
+                            <span class="skill-name">UBUNTU</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-description="Hack the Internet">
+                            <img src="./assets/images/kali.svg" alt="Kali Linux" class="skill-icon">
+                            <span class="skill-name">KALI LINUX</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-group fade-in-up">
+                    <h3 class="skills-group-title">EMBEDDED SYSTEMS</h3>
+                    <div class="skills-list">
+                        <div class="skill-item"
+                            data-description="Micro-Controller Coding">
+                            <img src="./assets/images/arduino.svg" alt="Python" class="skill-icon">
+                            <span class="skill-name">ARDUINO</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="skills-group fade-in-up">
+                    <h3 class="skills-group-title">VERSION CONTROL</h3>
+                    <div class="skills-list">
+                        <div class="skill-item"
+                            data-description="Project Management">
+                            <img src="./assets/images/github.svg" alt="Github" class="skill-icon">
+                            <span class="skill-name">GIT & GITHUB</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-group fade-in-up">
+                    <h3 class="skills-group-title">OTHERS</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-description="UI/UX tool">
+                            <img src="./assets/images/Figma.svg" alt="Figma" class="skill-icon">
+                            <span class="skill-name">FIGMA</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"
+                            data-description="Designing tool">
+                            <img src="./assets/images/Canva.svg" alt="Canva" class="skill-icon">
+                            <span class="skill-name">CANVA</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item"
+                            data-description="Graphic design">
+                            <img src="./assets/images/Photoshop.svg" alt="Photoshop" class="skill-icon">
+                            <span class="skill-name">ADOBE PHOTOSHOP</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-description="Photo editing & enhancements">
+                            <img src="./assets/images/Lightroom.png" alt="Lightroom" class="skill-icon">
+                            <span class="skill-name">ADOBE LIGHTROOM</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="skills-group fade-in-up">
+                    <h3 class="skills-group-title">SOFT SKILLS</h3>
+                    <div class="soft-skills-list">
+                        <div class="soft-skill-badge">
+                            <div class="skill-icon">LEAD</div>
+                            <span class="soft-skill-name">LEADERSHIP</span>
+                        </div>
+                        <div class="soft-skill-badge">
+                            <div class="skill-icon">COM</div>
+                            <span class="soft-skill-name">COMMUNICATION</span>
+                        </div>
+                        <div class="soft-skill-badge">
+                            <div class="skill-icon">TEAM</div>
+                            <span class="soft-skill-name">TEAMWORK</span>
+                        </div>
+                        <div class="soft-skill-badge">
+                            <div class="skill-icon">STRAT</div>
+                            <span class="soft-skill-name">STRATEGIC THINKING</span>
+                        </div>
+                        <div class="soft-skill-badge">
+                            <div class="skill-icon">PROB</div>
+                            <span class="soft-skill-name">PROBLEM SOLVING</span>
+                        </div>
+                        <div class="soft-skill-badge">
+                            <div class="skill-icon">ADAPT</div>
+                            <span class="soft-skill-name">ADAPTABILITY</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title fade-in-up">FEATURED_PROJECTS</h2>
+                <p class="section-subtitle fade-in-up">Projects Arsenal</p>
+
+                <div class="projects-grid fade-in-up">
+
+                    <div class="project-card project--ongoing">
+                        <div class="ongoing-indicator">
+                            <div class="pulse-dot"></div>
+                            <span>IN PROGRESS</span>
+                        </div>
+                        <h3 class="project-title">DARK WEB MONITORING SYSTEM</h3>
+                        <p class="project-description">Comprehensive dark web monitoring solution for threat
+                            intelligence gathering, credential leak detection, and automated alerting system with secure
+                            Tor network integration.</p>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Tor Network</span>
+                            <span class="tech-badge">Threat Intel</span>
+                            <span class="tech-badge">Automation</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/ROSHAN-Z89" class="github-link" target="_blank"
+                                rel="noopener noreferrer">VIEW CODE</a>
+                        </div>
+                    </div>
+
+
+                    <div class="project-card project--completed">
+                        <h3 class="project-title">URL SECURITY ANALYZER</h3>
+                        <p class="project-description">Advanced Python-based security tool for analyzing and validating
+                            URLs, detecting potential threats, SSRF vulnerabilities, and suspicious schemes with
+                            comprehensive reporting capabilities.</p>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Security</span>
+                            <span class="tech-badge">OSINT</span>
+                            <span class="tech-badge">API Integration</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/ROSHAN-Z89/URL_ANALYZER" class="github-link" target="_blank"
+                                rel="noopener noreferrer">VIEW CODE</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card project--completed">
+                        <h3 class="project-title">PORTFOLIO WEBSITE</h3>
+                        <p class="project-description">
+                            Personal portfolio website showcasing cybersecurity projects, technical skills, and
+                            professional profile.
+                            Features dark/light themes, terminal loader animations, interactive skills section, and
+                            responsive design for seamless user experience.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/ROSHAN-Z89/Portfolio" class="github-link" target="_blank"
+                                rel="noopener noreferrer">VIEW CODE</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card project--completed">
+                        <h3 class="project-title">KEYLOGGER</h3>
+                        <p class="project-description">
+                            Lightweight Python-based security tool for capturing and logging keystrokes, built to
+                            demonstrate input monitoring techniques and strengthen ethical cybersecurity research
+                            skills.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Security</span>
+                            <span class="tech-badge">Keylogger</span>
+                            <span class="tech-badge">Monitotring</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/ROSHAN-Z89/Keylogger" class="github-link" target="_blank"
+                                rel="noopener noreferrer">VIEW CODE</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card project--completed">
+                        <h3 class="project-title">PASSWORD GENERATOR</h3>
+                        <p class="project-description">
+                            Python tool for generating strong, customizable, and secure passwords with randomness and
+                            user-defined rules.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Security</span>
+                            <span class="tech-badge">Password Generation</span>
+                            <span class="tech-badge">Encryption</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/ROSHAN-Z89/PassGenerator" class="github-link" target="_blank"
+                                rel="noopener noreferrer">VIEW CODE</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card project--completed">
+                        <h3 class="project-title">Arduino Object Sensor </h3>
+                        <p class="project-description">
+                            Arduino-based embedded system utilizing IR sensors for accurate object detection and
+                            proximity sensing, capable of triggering automated responses in real-time applications.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Arduino</span>
+                            <span class="tech-badge">Embedded Systems</span>
+                            <span class="tech-badge">IR Sensor</span>
+                            <span class="tech-badge">Object Detection</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/ROSHAN-Z89/IOT" class="github-link" target="_blank"
+                                rel="noopener noreferrer">VIEW CODE</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card project--completed">
+                        <h3 class="project-title">PORT SCANNER </h3>
+                        <p class="project-description">
+                            Python-based tool for scanning target systems to identify open ports and running services,
+                            enabling network security assessment and vulnerability detection in real-time environments.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Networking</span>
+                            <span class="tech-badge">Security</span>
+                            <span class="tech-badge">Port Scanning</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/ROSHAN-Z89/Port-Scanner" class="github-link" target="_blank"
+                                rel="noopener noreferrer">VIEW CODE</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card project--completed">
+                        <h3 class="project-title">TO-DO LIST </h3>
+                        <p class="project-description">
+                            Interactive web application to manage daily tasks efficiently, featuring task creation,
+                            editing, completion tracking, and persistent storage for organized workflow.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Web App</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/ROSHAN-Z89/To-Do-List" class="github-link" target="_blank"
+                                rel="noopener noreferrer">VIEW CODE</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card project--completed">
+                        <h3 class="project-title">CALCULATOR </h3>
+                        <p class="project-description">
+                            Simple yet functional calculator application supporting basic arithmetic operations,
+                            designed with a clean UI for quick and accurate calculations.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Web App</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/ROSHAN-Z89/Calculator" class="github-link" target="_blank"
+                                rel="noopener noreferrer">VIEW CODE</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="section">
+            <div class="container">
+                <h2 class="section-title fade-in-up">CYBERSECURITY_BLOGS</h2>
+                <p class="section-subtitle fade-in-up">Roshan shares knowledge through <b>Blogs</b></p>
+
+                <div class="blog-grid fade-in-up">
+
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="assets/banner/proxy.webp" alt="proxy and proxy server explained" loading="lazy">
+                            <div class="blog-category">PROXY - ALL YOU NEED TO KNOW</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3 class="blog-title">Proxy - All You Need to Know</h3>
+                            <p class="blog-description">
+                                Discover how proxies work, the difference between a proxy and a proxy server, and why
+                                they're essential
+                                for online privacy and security. Learn about types of proxies, what data is shared, and
+                                how they keep
+                                your IP hidden while browsing.
+                            </p>
+                            <div class="blog-meta">
+                                <span class="blog-date">Published on Hashnode</span>
+                                <span class="blog-readtime">5 min read</span>
+                            </div>
+                            <a href="https://rootiq.hashnode.dev/proxy-all-you-need-to-know" target="_blank"
+                                rel="noopener noreferrer" class="read-more-btn">
+                                <span>READ_MORE</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M7 17L17 7"></path>
+                                    <path d="M7 7H17V17"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="assets/banner/supplychainattack.webp" alt="npm Supply Chain Attack"
+                                loading="lazy">
+                            <div class="blog-category">SUPPLY CHAIN ATTACK</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3 class="blog-title">npm Supply Chain Attack - Shai-Hulud Worm</h3>
+                            <p class="blog-description">A look at the September 2025 npm supply chain attack, where
+                                phishing led to compromised maintainer accounts and malicious updates to popular
+                                libraries like <em>debug</em>, <em>chalk</em>, and <em>ansi-styles</em>. We break down
+                                its rapid spread and the defenses developers must adopt.</p>
+                            <div class="blog-meta">
+                                <span class="blog-date">Published on Hashnode</span>
+                                <span class="blog-readtime">3 min read</span>
+                            </div>
+                            <a href="https://rootiq.hashnode.dev/supply-chain-attack" target="_blank"
+                                rel="noopener noreferrer" class="read-more-btn">
+                                <span>READ_MORE</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M7 17L17 7"></path>
+                                    <path d="M7 7H17V17"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="assets/banner/databreach.jpg" alt="Data Breach at Google" loading="lazy">
+                            <div class="blog-category">DATA BREACH</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3 class="blog-title">Data Breach at Google - ShinyHunters Strike Again</h3>
+                            <p class="blog-description">An in-depth analysis of the recent Google data breach
+                                orchestrated by the notorious ShinyHunters group. Examining the attack vectors, impact
+                                assessment, and security implications for enterprise organizations worldwide.
+                            </p>
+                            <div class="blog-meta">
+                                <span class="blog-date">Published on Hashnode</span>
+                                <span class="blog-readtime">5 min read</span>
+                            </div>
+                            <a href="https://rootiq.hashnode.dev/data-breach-at-google-shinyhunters-strike-again"
+                                target="_blank" rel="noopener noreferrer" class="read-more-btn">
+                                <span>READ_MORE</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M7 17L17 7"></path>
+                                    <path d="M7 7H17V17"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="assets/banner/CWE787.webp" alt="CWE-787 Out of Bounds Write" loading="lazy">
+                            <div class="blog-category">VULNERABILITY</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3 class="blog-title">Lessons from CWE-787: Out-of-Bounds Write & Why It's Important</h3>
+                            <p class="blog-description">Deep dive into CWE-787 vulnerabilities, exploring out-of-bounds
+                                write attacks, memory corruption techniques, and essential mitigation strategies for
+                                secure software development practices.</p>
+                            <div class="blog-meta">
+                                <span class="blog-date">Published on Hashnode</span>
+                                <span class="blog-readtime">8 min read</span>
+                            </div>
+                            <a href="https://rootiq.hashnode.dev/httpsrootiqhashnodedevout-of-bound-write"
+                                target="_blank" rel="noopener noreferrer" class="read-more-btn">
+                                <span>READ_MORE</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M7 17L17 7"></path>
+                                    <path d="M7 7H17V17"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title fade-in-up">GET IN TOUCH</h2>
+                <p class="section-subtitle fade-in-up">Roshan would love to connect with You</p>
+
+                <div class="contact-container fade-in-up">
+                    <div class="contact-card centered">
+                        <div class="contact-header">
+                        <h3>SEND MESSAGE</h3>
+                        <p class="security-note">Messages are end-to-end encrypted</p>
+                        </div>
+                        
+                        <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                            <label for="contact-name">FULL NAME</label>
+                            <input type="text" id="contact-name" name="name" required placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                            <label for="contact-email">EMAIL ADDRESS</label>
+                            <input type="email" id="contact-email" name="email" required placeholder="rouson.ece@gmail.com">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-subject">SUBJECT</label>
+                            <select id="contact-subject" name="subject" required>
+                            <option value="">Select a subject...</option>
+                            <option value="Collab">Project Collaboration</option>
+                            <option value="Work">Work Opportunity</option>
+                            <option value="Learn">Learn with Roshan</option>
+                            <option value="Research">Research Collaboration</option>
+                            <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-message">MESSAGE</label>
+                            <textarea id="contact-message" name="message" rows="6" required placeholder="Tell me about your security project or inquiry..."></textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn-contact cta-button">
+                            <span>SEND SECURE MESSAGE</span>
+                            </button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+    </main>
+
+    <!-- FIXED: Floating Contact Button with SVG -->
+    <div class="floating-contact" id="floating-contact" title="Contact Me">
+        <img src="./assets/images/message.svg" alt="Message" />
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-layout">
+                <p class="copyright">© 2025 Roshan Das. All rights reserved.</p>
+                <div class="spacer"></div>
+            </div>
+        </div>
+    </footer> 
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

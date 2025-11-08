@@ -13,6 +13,8 @@
     <meta name="author" content="Roshan Das">
     <meta name="theme-color" content="#000000">
 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -27,7 +29,7 @@
     <div id="terminal-loader" class="terminal-loader">
         <div class="terminal-content">
             <div class="terminal-header">
-                <div class="terminal-title">ROSHAN-PORTFOLIO:~$</div>
+                <div class="terminal-title"> >/ Roshan Portfolio</div>
                 <button id="skip-loader" class="skip-button" tabindex="0">Skip</button>
             </div>
             <div class="terminal-output" id="terminal-output">
@@ -38,12 +40,12 @@
         <div id="loader-announcer" class="sr-only" aria-live="polite"></div>
     </div>
 
+
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="terminal-icon"><a href="#home" data-section="home">HACKER</a></span>
+                <span class="terminal-icon">HACKER</span>
             </div>
-            
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link active" data-section="home">HOME</a>
                 <a href="#about" class="nav-link" data-section="about">ABOUT</a>
@@ -51,59 +53,49 @@
                 <a href="#projects" class="nav-link" data-section="projects">PROJECTS</a>
                 <a href="#blog" class="nav-link" data-section="blog">BLOG</a>
             </div>
-            
-            <div class="nav-controls">
-                <div class="theme-toggle" id="theme-toggle" title="Switch theme">
-                    <div class="theme-toggle-slider">
-                        <span class="theme-icon"></span>
-                    </div>
-                </div>
-                
-                <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
 
+
+    
+    </div>
+
+
     <main class="main-content">
 
         <section id="home" class="section active">
-
             <canvas id="matrixCanvas" class="matrix-canvas"></canvas>
             <div class="matrix-overlay"></div>
-
             <div class="hero-container fade-in-up">
                 <div class="hero-content">
                     <div class="hero-name">
-                        <span class="name-text">ROSHAN DAS</span>
-
-                          <!-- NEW: Social Media Links -->
-                        <div class="hero-social-links">
-                            <a href="mailto:rouson.ece@gmail.com" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="Email">
-                                <img src="./assets/socials/mail.svg" alt="Email" class="hero-social-icon">
-                            </a>
-                            <a href="https://github.com/ROSHAN-Z89" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="GitHub">
-                                <img src="./assets/socials/github.svg" alt="GitHub" class="hero-social-icon">
-                            </a>
-                            <a href="https://linkedin.com/in/rouson-das-563b52284" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="LinkedIn">
-                                <img src="./assets/socials/linkedin.svg" alt="LinkedIn" class="hero-social-icon">
-                            </a>
-                            <a href="https://linktr.ee/DR05HAN_27" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="Linktree">
-                                <img src="./assets/socials/linktree.svg" alt="Linktree" class="hero-social-icon">
-                            </a>
-                        </div>
-                        <p class="hero-subtitle">
-                            <span class="typing-text" id="typing-text"></span>
-                            <span class="cursor">|</span>
-                        </p>
+                        <span class="name-text">ROUSON_DAS</span>
                     </div>
+                    <p class="hero-subtitle">
+                        <span class="typing-text" id="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </p>
                     
+                    <!-- Social Media Icons - ADD THIS SECTION -->
+                    <div class="hero-social-links">
+                        <a href="mailto:roshan.ece@gmail.com" class="social-icon-link" title="Email" target="_blank" img src="/assets/socials/mail.png" rel="noopener noreferrer">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/rouson-das-563b52284" class="social-icon-link" title="LinkedIn" img src="/assets/socials/linkedin.webp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/ROSHAN-Z89" class="social-icon-link" title="GitHub" target="_blank" img src="/assets/socials/github.svg" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+
                     <div class="hero-buttons">
-                        <!-- FIXED: Changed to navigate to contact -->
-                        <button class="btn btn-primary cta-button" data-section="contact">Learn With ROSHAN</button>
+                        <button class="btn btn-primary cta-button" data-section="contact">Hack with ROSHAN</button>
                         <button class="btn btn-secondary cta-button" id="downloadResumeBtn">RESUME</button>
                     </div>
                 </div>
@@ -112,37 +104,49 @@
 
         <section id="about" class="section">
             <div class="container">
+                <h2 class="section-title fade-in-up">ABOUT ME</h2>
                 <p class="section-subtitle fade-in-up">
                     <span id="typing-animation" class="typing-animation"></span>
                 </p>
                 <div id="about-content" class="about-fadein" style="display:none;">
                     <div class="about-grid fade-in-up">
                         <div class="about-card">
-                            <div class="profile-avatar">X</div>
-                            <h3 class="profile-name">ROSHAN_DAS</h3>
-                            <p class="profile-title">Security Learner <br> ECE Undergrad</p>
+                            <div class="profile-avatar">RD</div>
+                            <h3 class="profile-name">ROSHAN DAS</h3>
+                            <p class="profile-title">Cybersecurity Learner & ECE Undergrad</p>
                             <div class="profile-info">
-                                <p><span class="info-label">EDUCATION:</span> B.Tech ECE, MAKAUT University</p>
-                                <p><span class="info-label">GRADUATION:</span> Expected 2027</p>
-                                <p><span class="info-label">FOCUS AREAS:</span> Ethical Hacking, Web Security &
-                                    Cyber Defence
-                                </p>
-                                <p><span class="info-label">STATUS:</span> Open to Internship & Collaboration
-                                    Opportunities</p>
+                                <p><span class="info-label">EDUCATION:</span> <i>B.Tech in </i><i>Electronics And
+                                        Communication Engineering</i><br> <i>MAKAUT University</i></p>
+                                <p><span class="info-label">GRADUATION:</span> <i>Expected 2027</i></p>
+                                <p><span class="info-label">FOCUS AREAS:</span> <i>Ethical Hacking, Web Security & Cyber
+                                        Defence</i> </p>
+                                <p><span class="info-label">STATUS:</span> <i>Open to Internship & Collaboration
+                                        Opportunities</i></p>
                             </div>
                         </div>
                         <div class="about-description">
                             <div class="glass-card">
                                 <h3>whoami_?</h3>
-                                <p>Roshan is currently pursuing his <b>B.Tech degree</b> in <b> Electronics and Communication</b>
-                                    Engineering(ECE). He is also passionate about Offensive and Defensive Security.
-                                    Roshan spends his day exploring security concepts, vulnerabilities, solve CTFs and
-                                    analyze code and make it better. He has hands-on experience in frameworks such as <b>OWASP Top 10, Sans 25.</b></p>
-                                <p> He is a participant at SIH'25, Bharatiya Antariksh Hackathon(by ISRO).</p>
-                                <p>Roshan loves to share his knowledge through blogs at <a href="https://rootiq.hashnode.dev">rootiq</a> and
-                                    documents his CTF writeups and security notes on <a href="https://github.com/ROSHAN-Z89/CTFs">GitHub</a> to help others.</p>
-                                <p>Roshan contributes beyond the tech side -> surving as a <b>Community Coordinator</b> in
-                                    the <b>Apex Circle</b>community.</p>
+                                <i>
+                                    <p>Roshan is currently pursuing <b>BTech in Electronics and Communication
+                                            Engineering</b>, with a strong passion for <b>Cybersecurity, Programming,
+                                            and Hardware Systems.</b> His academic foundation is complemented by
+                                        hands-on experience in <b>embedded systems, ethical hacking, and building
+                                            security tools</b>. He enjoys exploring the evolving landscape of
+                                        <b>cybersecurity</b>, focusing on <b>identifying vulnerabilities, strengthening
+                                            defenses, and building secure digital ecosystems</b>. </p>
+                                    <p>Driven by curiosity and a problem-solving mindset, Roshan actively engages in
+                                        <b>security-oriented projects</b> that focus on <b>ethical hacking, penetration
+                                            testing, and threat analysis</b>. He has also participated in <b>hackathons,
+                                            capture-the-flag (CTF) events, and developer festivals (DevFests)</b> that
+                                        have strengthened his skills in cybersecurity, threat analysis, and real-world
+                                        problem solving. </p>
+                                    <p>His work often loves to <b>identify vulnerabilities</b> and <b>build defense
+                                            mechanisms</b> to safeguard digital infrastructure. He is dedicated to
+                                        <b>continuous learning and collaboration within the tech community</b>, aims to
+                                        develop <b>robust, secure, and scalable systems</b> that advance the future of
+                                        <b>cybersecurity and technology</b>. </p>
+                                </i>
                             </div>
                         </div>
                     </div>
@@ -150,13 +154,49 @@
             </div>
         </section>
 
+
+
         <section id="skills" class="section">
             <div class="container">
                 <h2 class="section-title fade-in-up">TECHNICAL_EXPERTISE</h2>
-                <p class="section-subtitle fade-in-up">What Roshan knows? || What he is learning? </p>
+                <p class="section-subtitle fade-in-up">Fluent in the languages of code, security, and defense</p>
+
 
                 <div class="skills-group fade-in-up">
+                    <h3 class="skills-group-title">CURRENTLY LEARNING</h3>
+                    <div class="skills-list">
+
+                        <div class="skill-item learning-item"
+                            data-description="Algorithms and data organization for programming">
+                            <img src="./assets/images/dsa.png" alt="Data Structures & Algorithms" class="skill-icon">
+                            <span class="skill-name">DATA STRUCTURES & ALGORITHMS</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="60%"></div>
+                            </div>
+                            <span class="skill-level">LEARNING</span>
+
+                        </div>
+                        <div class="skill-item learning-item"
+                            data-description="Cybersecurity competitions and challenges">
+                            <img src="./assets/images/ctf.png" alt="Capture The Flag" class="skill-icon">
+                            <span class="skill-name">CAPTURE THE FLAG (CTF)</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="_blank"></div>
+                            </div>
+                            <span class="skill-level">LEARNING</span>
+                        </div>
+                        <div class="skill-item learning-item" data-description="Web Application Pentesting">
+                            <img src="./assets/images/webPentesting.png" alt="Web Pentesting" class="skill-icon">
+                            <span class="skill-name">WEB APPLICATION PENTESTING</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" data-width="40%"></div>
+                            </div>
+                            <span class="skill-level">LEARNING</span>
+                        </div>
+
+                    </div>
                 </div>
+
 
                 <div class="skills-group fade-in-up">
                     <h3 class="skills-group-title">SECURITY TOOLS & FRAMEWORKS</h3>
@@ -168,7 +208,7 @@
                                 <div class="proficiency-fill" data-width="25%"></div>
                             </div>
                         </div>
-                        <div class="skill-item" data-description="Discover hosts and services on network">
+                        <div class="skill-item" data-description="Network discovery and security auditing tool">
                             <img src="./assets/images/nmap.webp" alt="Nmap" class="skill-icon">
                             <span class="skill-name">NMAP</span>
                             <div class="proficiency-bar">
@@ -189,7 +229,7 @@
                                 <div class="proficiency-fill" data-width="50%"></div>
                             </div>
                         </div>
-                        <div class="skill-item" data-description="Directory & DNS brute-forcing tool">
+                        <div class="skill-item" data-description="Directory & DNS brute-forcing tool for web recon">
                             <img src="./assets/images/gobuster.svg" alt="Gobuster" class="skill-icon">
                             <span class="skill-name">GOBUSTER</span>
                             <div class="proficiency-bar">
@@ -197,7 +237,7 @@
                             </div>
                         </div>
                         <div class="skill-item"
-                            data-description="Read/Write data across internet">
+                            data-description="Networking utility for reading/writing across connections">
                             <img src="./assets/images/netcat.svg" alt="Netcat" class="skill-icon">
                             <span class="skill-name">NETCAT</span>
                             <div class="proficiency-bar">
@@ -211,7 +251,7 @@
                                 <div class="proficiency-fill" data-width="30%"></div>
                             </div>
                         </div>
-                        <div class="skill-item" data-description="Reverse Engineering Framework">
+                        <div class="skill-item" data-description="Software Reverse Engineering Framework">
                             <img src="./assets/images/ghidra.webp" alt="Ghidra" class="skill-icon">
                             <span class="skill-name">GHIDRA</span>
                             <div class="proficiency-bar">
@@ -228,8 +268,9 @@
                     </div>
                 </div>
 
+
                 <div class="skills-group fade-in-up">
-                    <h3 class="skills-group-title">CODE BASE</h3>
+                    <h3 class="skills-group-title">CODE ARSENAL</h3>
                     <div class="skills-list">
                         <div class="skill-item" data-description="Markup language for web pages">
                             <img src="./assets/images/HTML5.svg" alt="Html" class="skill-icon">
@@ -239,21 +280,21 @@
                             </div>
                         </div>
                         <div class="skill-item"
-                            data-description="Design webpage">
+                            data-description="Style sheet language for designing responsive and visually appealing web pages">
                             <img src="./assets/images/CSS3.svg" alt="Css" class="skill-icon">
                             <span class="skill-name">CSS3</span>
                             <div class="proficiency-bar">
                                 <div class="proficiency-fill" data-width="90%"></div>
                             </div>
                         </div>
-                        <div class="skill-item" data-description="Old age scripting language for web dev">
+                        <div class="skill-item" data-description="Client-side scripting language for web">
                             <img src="./assets/images/PHP.svg" alt="Php" class="skill-icon">
                             <span class="skill-name">PHP</span>
                             <div class="proficiency-bar">
                                 <div class="proficiency-fill" data-width="70%"></div>
                             </div>
                         </div>
-                        <div class="skill-item" data-description="Add login to web pages">
+                        <div class="skill-item" data-description="Client-side scripting language for web">
                             <img src="./assets/images/javascript.svg" alt="JavaScript" class="skill-icon">
                             <span class="skill-name">JAVASCRIPT</span>
                             <div class="proficiency-bar">
@@ -268,7 +309,7 @@
                             </div>
                         </div>
                         <div class="skill-item"
-                            data-description="Server-side javascript excution">
+                            data-description="Runtime environment for executing JavaScript on the server side">
                             <img src="./assets/images/node.svg" alt="Nodejs" class="skill-icon">
                             <span class="skill-name">NODE</span>
                             <div class="proficiency-bar">
@@ -276,49 +317,49 @@
                             </div>
                         </div>
                         <div class="skill-item"
-                            data-description="CSS framework, responsive UIs">
+                            data-description="Utility-first CSS framework for rapidly building modern, responsive UIs">
                             <img src="./assets/images/Tailwind CSS.svg" alt="Tailwind Css" class="skill-icon">
                             <span class="skill-name">TAILWIND CSS</span>
                             <div class="proficiency-bar">
                                 <div class="proficiency-fill" data-width="70%"></div>
                             </div>
                         </div>
-                        <div class="skill-item" data-description="API testing tool">
+                        <div class="skill-item" data-description="API testing and collaboration tool">
                             <img src="./assets/images/Postman.svg" alt="Postman" class="skill-icon">
                             <span class="skill-name">POSTMAN</span>
                             <div class="proficiency-bar">
                                 <div class="proficiency-fill" data-width="50%"></div>
                             </div>
                         </div>
-                        <div class="skill-item" data-description="Best scripting language">
+                        <div class="skill-item" data-description="Versatile scripting language">
                             <img src="./assets/images/python.svg" alt="Python" class="skill-icon">
                             <span class="skill-name">PYTHON</span>
                             <div class="proficiency-bar">
                                 <div class="proficiency-fill" data-width="90%"></div>
                             </div>
                         </div>
-                        <div class="skill-item" data-description="Language to write Linux">
+                        <div class="skill-item" data-description="Low-level programming language">
                             <img src="./assets/images/C.svg" alt="C" class="skill-icon">
                             <span class="skill-name">C</span>
                             <div class="proficiency-bar">
                                 <div class="proficiency-fill" data-width="80%"></div>
                             </div>
                         </div>
-                        <div class="skill-item" data-description="Base Language for Games">
+                        <div class="skill-item" data-description="Object-oriented programming language">
                             <img src="./assets/images/Cplusplus.svg" alt="C++" class="skill-icon">
                             <span class="skill-name">C++</span>
                             <div class="proficiency-bar">
                                 <div class="proficiency-fill" data-width="70%"></div>
                             </div>
                         </div>
-                        <div class="skill-item" data-description="Best choise for Application Developers">
+                        <div class="skill-item" data-description="Platform-independent programming language">
                             <img src="./assets/images/java.svg" alt="Java" class="skill-icon">
                             <span class="skill-name">JAVA</span>
                             <div class="proficiency-bar">
                                 <div class="proficiency-fill" data-width="40%"></div>
                             </div>
                         </div>
-                        <div class="skill-item" data-description="Low-level machine language">
+                        <div class="skill-item" data-description="Low-level machine language programming">
                             <img src="./assets/images/assembly.svg" alt="Assembly" class="skill-icon">
                             <span class="skill-name">ASSEMBLY</span>
                             <div class="proficiency-bar">
@@ -334,7 +375,7 @@
                             </div>
                         </div>
                         <div class="skill-item"
-                            data-description="Scripting language for Windows environments">
+                            data-description="Task automation and scripting language for Windows environments">
                             <img src="./assets/images/powershell.svg" alt="PowerShell" class="skill-icon">
                             <span class="skill-name">POWERSHELL</span>
                             <div class="proficiency-bar">
@@ -343,6 +384,7 @@
                         </div>
                     </div>
                 </div>
+
 
                 <div class="skills-group fade-in-up">
                     <h3 class="skills-group-title">DATABASES</h3>
@@ -361,7 +403,7 @@
                                 <div class="proficiency-fill" data-width="65%"></div>
                             </div>
                         </div>
-                        <div class="skill-item" data-description="NoSQL database">
+                        <div class="skill-item" data-description="NoSQL document database">
                             <img src="./assets/images/mongo.svg" alt="MongoDB" class="skill-icon">
                             <span class="skill-name">MONGODB</span>
                             <div class="proficiency-bar">
@@ -375,7 +417,7 @@
                 <div class="skills-group fade-in-up">
                     <h3 class="skills-group-title">OPERATING SYSTEMS</h3>
                     <div class="skills-list">
-                        <div class="skill-item" data-description="Microsoft Windows">
+                        <div class="skill-item" data-description="Microsoft operating system">
                             <img src="./assets/images/windows.png" alt="Windows" class="skill-icon">
                             <span class="skill-name">WINDOWS</span>
                             <div class="proficiency-bar">
@@ -383,7 +425,7 @@
                             </div>
                         </div>
 
-                        <div class="skill-item" data-description="Linux distribution">
+                        <div class="skill-item" data-description="Linux distribution for development">
                             <img src="./assets/images/ubuntu.svg" alt="Ubuntu" class="skill-icon">
                             <span class="skill-name">UBUNTU</span>
                             <div class="proficiency-bar">
@@ -391,7 +433,7 @@
                             </div>
                         </div>
 
-                        <div class="skill-item" data-description="Hack the Internet">
+                        <div class="skill-item" data-description="Penetration testing Linux distribution">
                             <img src="./assets/images/kali.svg" alt="Kali Linux" class="skill-icon">
                             <span class="skill-name">KALI LINUX</span>
                             <div class="proficiency-bar">
@@ -401,11 +443,12 @@
                     </div>
                 </div>
 
+
                 <div class="skills-group fade-in-up">
                     <h3 class="skills-group-title">EMBEDDED SYSTEMS</h3>
                     <div class="skills-list">
                         <div class="skill-item"
-                            data-description="Micro-Controller Coding">
+                            data-description="Open-source hardware platform for building electronics and IoT projects">
                             <img src="./assets/images/arduino.svg" alt="Python" class="skill-icon">
                             <span class="skill-name">ARDUINO</span>
                             <div class="proficiency-bar">
@@ -420,7 +463,7 @@
                     <h3 class="skills-group-title">VERSION CONTROL</h3>
                     <div class="skills-list">
                         <div class="skill-item"
-                            data-description="Project Management">
+                            data-description="Version control platform for code collaboration and project management">
                             <img src="./assets/images/github.svg" alt="Github" class="skill-icon">
                             <span class="skill-name">GIT & GITHUB</span>
                             <div class="proficiency-bar">
@@ -430,10 +473,12 @@
                     </div>
                 </div>
 
+
+
                 <div class="skills-group fade-in-up">
                     <h3 class="skills-group-title">OTHERS</h3>
                     <div class="skills-list">
-                        <div class="skill-item" data-description="UI/UX tool">
+                        <div class="skill-item" data-description="Collaborative UI/UX prototyping tool">
                             <img src="./assets/images/Figma.svg" alt="Figma" class="skill-icon">
                             <span class="skill-name">FIGMA</span>
                             <div class="proficiency-bar">
@@ -441,7 +486,7 @@
                             </div>
                         </div>
                         <div class="skill-item"
-                            data-description="Designing tool">
+                            data-description="Online design tool for creating quick, accessible visuals and graphics">
                             <img src="./assets/images/Canva.svg" alt="Canva" class="skill-icon">
                             <span class="skill-name">CANVA</span>
                             <div class="proficiency-bar">
@@ -449,7 +494,7 @@
                             </div>
                         </div>
                         <div class="skill-item"
-                            data-description="Graphic design">
+                            data-description="Professional tool for image editing, digital art, and graphic design">
                             <img src="./assets/images/Photoshop.svg" alt="Photoshop" class="skill-icon">
                             <span class="skill-name">ADOBE PHOTOSHOP</span>
                             <div class="proficiency-bar">
@@ -471,12 +516,12 @@
                     <h3 class="skills-group-title">SOFT SKILLS</h3>
                     <div class="soft-skills-list">
                         <div class="soft-skill-badge">
-                            <div class="skill-icon">LEAD</div>
-                            <span class="soft-skill-name">LEADERSHIP</span>
-                        </div>
-                        <div class="soft-skill-badge">
                             <div class="skill-icon">COM</div>
                             <span class="soft-skill-name">COMMUNICATION</span>
+                        </div>
+                        <div class="soft-skill-badge">
+                            <div class="skill-icon">LEAD</div>
+                            <span class="soft-skill-name">LEADERSHIP</span>
                         </div>
                         <div class="soft-skill-badge">
                             <div class="skill-icon">TEAM</div>
@@ -564,6 +609,7 @@
                                 rel="noopener noreferrer">VIEW CODE</a>
                         </div>
                     </div>
+
 
                     <div class="project-card project--completed">
                         <h3 class="project-title">KEYLOGGER</h3>
@@ -681,7 +727,8 @@
         <section id="blog" class="section">
             <div class="container">
                 <h2 class="section-title fade-in-up">CYBERSECURITY_BLOGS</h2>
-                <p class="section-subtitle fade-in-up">Roshan shares knowledge through <b>Blogs</b></p>
+                <p class="section-subtitle fade-in-up">Latest insights on security research and vulnerability analysis
+                </p>
 
                 <div class="blog-grid fade-in-up">
 
@@ -803,71 +850,130 @@
 
         <section id="contact" class="section">
             <div class="container">
-                <h2 class="section-title fade-in-up">GET IN TOUCH</h2>
-                <p class="section-subtitle fade-in-up">Roshan would love to connect with You</p>
+                <h2 class="section-title fade-in-up">GET_IN_TOUCH</h2>
+                <p class="section-subtitle fade-in-up">Ready to collaborate on cybersecurity projects</p>
 
-                <div class="contact-container fade-in-up">
-                    <div class="contact-card centered">
+                <div class="contact-grid fade-in-up">
+                    <div class="contact-card">
                         <div class="contact-header">
-                        <h3>SEND MESSAGE</h3>
-                        <p class="security-note">Messages are end-to-end encrypted</p>
+                            <h3>SEND_MESSAGE</h3>
+                            <p>Interested in cybersecurity collaboration, freelance projects, or full-time
+                                opportunities? Let's connect!</p>
                         </div>
-                        
+
                         <form class="contact-form" id="contact-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                            <label for="contact-name">FULL NAME</label>
-                            <input type="text" id="contact-name" name="name" required placeholder="Enter your full name">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contact-name">FULL NAME</label>
+                                    <input type="text" id="contact-name" name="name" required
+                                        placeholder="Enter your full name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-email">EMAIL ADDRESS</label>
+                                    <input type="email" id="contact-email" name="email" required
+                                        placeholder="rouson.ece@gmail.com">
+                                </div>
                             </div>
+
                             <div class="form-group">
-                            <label for="contact-email">EMAIL ADDRESS</label>
-                            <input type="email" id="contact-email" name="email" required placeholder="rouson.ece@gmail.com">
+                                <label for="contact-subject">SUBJECT</label>
+                                <select id="contact-subject" name="subject" required>
+                                    <option value="">Select a subject...</option>
+                                    <option value="freelance">Freelance Security Project</option>
+                                    <option value="full-time">Full-time Opportunity</option>
+                                    <option value="consultation">Security Consultation</option>
+                                    <option value="collaboration">Research Collaboration</option>
+                                    <option value="other">Other</option>
+                                </select>
                             </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="contact-subject">SUBJECT</label>
-                            <select id="contact-subject" name="subject" required>
-                            <option value="">Select a subject...</option>
-                            <option value="Collab">Project Collaboration</option>
-                            <option value="Work">Work Opportunity</option>
-                            <option value="Learn">Learn with Roshan</option>
-                            <option value="Research">Research Collaboration</option>
-                            <option value="Other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="contact-message">MESSAGE</label>
-                            <textarea id="contact-message" name="message" rows="6" required placeholder="Tell me about your security project or inquiry..."></textarea>
-                        </div>
-                        
-                        <div class="form-actions">
-                            <button type="submit" class="btn-contact cta-button">
-                            <span>SEND SECURE MESSAGE</span>
-                            </button>
-                        </div>
+
+                            <div class="form-group">
+                                <label for="contact-message">MESSAGE</label>
+                                <textarea id="contact-message" name="message" rows="6" required
+                                    placeholder="Tell me about your security project or inquiry..."></textarea>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn-contact cta-button">
+                                    <span>SEND</span>
+                                </button>
+                            </div>
                         </form>
+                    </div>
+
+                    <div class="contact-info">
+                        <div class="contact-header">
+                            <h3>CONTACT_INFORMATION</h3>
+                            <p>Professional channels to reach me for secure communications.</p>
+                        </div>
+
+                        <div class="contact-details">
+                            <a href="mailto:rouson.ece@gmail.com" target="_blank" rel="noopener noreferrer"
+                                class="contact-detail-item">
+                                <img src="./assets/socials/mail.png" alt="Email" class="detail-icon">
+                                <div class="detail-content">
+                                    <h4>EMAIL</h4>
+                                    <p>rouson.ece@gmail.com</p>
+                                    <small>Primary communication channel</small>
+                                </div>
+                            </a>
+
+                            <a href="https://linkedin.com/in/rouson-das-563b52284" target="_blank"
+                                rel="noopener noreferrer" class="contact-detail-item">
+                                <img src="./assets/socials/linkedin.webp" alt="LinkedIn" class="detail-icon">
+                                <div class="detail-content">
+                                    <h4>LINKEDIN</h4>
+                                    <p>rouson-das-563b52284</p>
+                                    <small>Professional networking</small>
+                                </div>
+                            </a>
+
+                            <a href="https://github.com/ROSHAN-Z89" target="_blank" rel="noopener noreferrer"
+                                class="contact-detail-item">
+                                <img src="./assets/socials/github.svg" alt="GitHub" class="detail-icon">
+                                <div class="detail-content">
+                                    <h4>GITHUB</h4>
+                                    <p>ROSHAN-Z89</p>
+                                    <small>Open source projects</small>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            </section>
-
+        </section>
     </main>
 
-    <!-- FIXED: Floating Contact Button with SVG -->
+
     <div class="floating-contact" id="floating-contact" title="Contact Me">
         <img src="./assets/images/message.svg" alt="Message" />
     </div>
 
+
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-layout">
-                <p class="copyright">© 2025 Roshan Das. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://mail.google.com/mail/?view=cm&to=rouson.ece@gmail.com" class="social-link"
+                        title="Email">
+                        <img src="./assets/socials/mail.png" alt="Email">
+                    </a>
+
+                    <a href="https://linkedin.com/in/rouson-das-563b52284" target="_blank" rel="noopener noreferrer"
+                        class="social-link" title="LinkedIn">
+                        <img src="./assets/socials/linkedin.webp" alt="LinkedIn">
+                    </a>
+
+                    <a href="https://github.com/ROSHAN-Z89" target="_blank" rel="noopener noreferrer"
+                        class="social-link" title="GitHub">
+                        <img src="./assets/socials/github.svg" alt="GitHub">
+                    </a>
+                </div>
+                <p class="copyright">© 2025 Rouson Das. All rights reserved.</p>
                 <div class="spacer"></div>
             </div>
         </div>
-    </footer> 
+    </footer>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>

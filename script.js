@@ -202,7 +202,7 @@ class HomeTypingController {
         this.texts = ["Roshan is an EC Engineering student passionate about Cybersecurity and Ethical Hacking.\nHe enjoys exploring vulnerabilities, securing systems and building robust digital solutions.\nCurrently expanding his skills through projects, hackathons, and tech community collaborations.\n"];
         this.currentTextIndex = 0;
         this.currentCharIndex = 0;
-        this.typeSpeed = 1;
+        this.typeSpeed = 100;
         this.isStarted = false;
         this.hasStarted = false;
         this.reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -994,3 +994,4 @@ document.addEventListener("DOMContentLoaded", () => {
     const app = new PortfolioApp();
     app.init();
 });
+

@@ -1,4 +1,4 @@
-# 🌐 Roshan Das — Cybersecurity Portfolio
+# 🌐 Rouson Das — Cybersecurity Portfolio
 
 Welcome to my personal cybersecurity portfolio — a fast, minimal, hacker-aesthetic site that showcases my skills, projects, and research in **Ethical Hacking**, **Penetration Testing**, **Network Security**, and **Bug Hunting**.
 
@@ -79,7 +79,7 @@ Live site: [https://roshan-z89.github.io/Portfolio](https://roshan-z89.github.io
 
 ## 🔗 Connect / Contact
 
-- 🐙 [GitHub](https://github.com/ROSHAN-Z89)
+- 🐙 [GitHub](https://github.com/roshan-Z89)
 - 💼 [LinkedIn](https://linkedin.com/in/rouson-das-563b52284)
 - 🔗 [linktree](https://linktr.ee/DR05HAN_27)
 
@@ -99,4 +99,4 @@ This repo is for a personal portfolio. Use, fork, or adapt — but don’t claim
 
 ---
 
-> Designed & Developed with 💙 by **ROSHAN**
+> Designed & Developed with 💙 by **Rouson**

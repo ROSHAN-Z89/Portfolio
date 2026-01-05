@@ -199,7 +199,7 @@ class TerminalLoader {
 class HomeTypingController {
     constructor() {
         this.textElement = document.getElementById("typing-text");
-        this.texts = ["Roshan is an EC Engineering student passionate about Cybersecurity and Ethical Hacking.\nHe enjoys exploring vulnerabilities, securing systems and building robust digital solutions.\nCurrently expanding his skills through projects, hackathons, and tech community collaborations.\n"];
+        this.texts = ["Rouson is an EC Engineering student passionate about Cybersecurity and Ethical Hacking.\nHe enjoys exploring vulnerabilities, securing systems and building robust digital solutions.\nCurrently expanding his skills through projects, hackathons, and tech community collaborations.\n"];
         this.currentTextIndex = 0;
         this.currentCharIndex = 0;
         this.typeSpeed = 100;
@@ -465,7 +465,7 @@ class ResumeHandler {
     downloadResume = () => {
         const link = document.createElement("a");
         link.href = "./assets/resume.pdf";
-        link.download = "RoshanDas_Cybersecurity_Resume.pdf";
+        link.download = "RousonDas_Cybersecurity_Resume.pdf";
         link.style.display = "none";
         document.body.appendChild(link);
         link.click();
@@ -994,4 +994,5 @@ document.addEventListener("DOMContentLoaded", () => {
     const app = new PortfolioApp();
     app.init();
 });
+
 

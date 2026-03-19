@@ -199,7 +199,7 @@ class TerminalLoader {
 class HomeTypingController {
     constructor() {
         this.textElement = document.getElementById("typing-text");
-        this.texts = ["Rouson is an EC Engineering student passionate about Cybersecurity and Ethical Hacking.\nHe enjoys exploring vulnerabilities, securing systems and building robust digital solutions.\nCurrently expanding his skills through projects, hackathons, and tech community collaborations.\n"];
+        this.texts = ["I learn how systems are built — then I find every way to break them.\nNot to destroy. But to understand what others miss.\n"];
         this.currentTextIndex = 0;
         this.currentCharIndex = 0;
         this.typeSpeed = 100;

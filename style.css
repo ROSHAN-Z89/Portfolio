@@ -1,3 +1,9 @@
+/* ═══════════════════════════════════════════════════════════════
+   ROUSON DAS — HACKER PORTFOLIO v2.0
+   Fonts: Orbitron (headings) · Share Tech Mono (mono/body) · Rajdhani (UI)
+   Palette: Matrix green · Amber warning · Cyan intel · Red threat
+   ═══════════════════════════════════════════════════════════════ */
+
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Exo+2:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 :root {
@@ -696,7 +702,7 @@ body::after{
   display:flex;flex-direction:column;gap:20px;
   height:calc(100% - 38px);
 }
-
+.aterm-block{}
 .aterm-comment{
   display:block;
   font-family:var(--mono);font-size:0.65rem;

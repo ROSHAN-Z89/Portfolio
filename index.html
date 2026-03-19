@@ -1,1012 +1,654 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rouson Das | Cybersecurity Professional Portfolio</title>
-
-    <meta name="description"
-        content="Cybersecurity professional specializing in ethical hacking, penetration testing, and secure application development. Available for opportunities in India.">
-    <meta name="keywords"
-        content="cybersecurity, ethical hacking, penetration testing, web security, full-stack developer, OWASP, security researcher">
-    <meta name="author" content="Rouson Das">
-    <meta name="theme-color" content="#000000">
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rouson Das | Cybersecurity Professional Portfolio</title>
+  <meta name="description" content="Cybersecurity professional specializing in ethical hacking, penetration testing, and secure application development. Available for opportunities in India.">
+  <meta name="keywords" content="cybersecurity, ethical hacking, penetration testing, web security, full-stack developer, OWASP, security researcher">
+  <meta name="author" content="Rouson Das">
+  <meta name="theme-color" content="#00ff41">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Exo+2:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="dark-theme">
+  <!-- TERMINAL LOADER -->
+  <div id="terminal-loader" class="terminal-loader">
+    <div class="terminal-content">
+      <div class="terminal-header">
+        <div class="term-dots"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
+        <div class="terminal-title">root@r0us0n:~# init --portfolio</div>
+        <button id="skip-loader" class="skip-button" tabindex="0">[skip]</button>
+      </div>
+      <div class="terminal-output" id="terminal-output"></div>
+    </div>
+    <div id="loader-announcer" class="sr-only" aria-live="polite"></div>
+  </div>
 
-    <div id="terminal-loader" class="terminal-loader">
-        <div class="terminal-content">
-            <div class="terminal-header">
-                <div class="terminal-title"> >/ Rouson Portfolio</div>
-                <button id="skip-loader" class="skip-button" tabindex="0">Skip</button>
-            </div>
-            <div class="terminal-output" id="terminal-output">
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <div class="nav-logo">
+          <span class="logo-bracket">[</span><span class="logo-name">R0US0N</span><span class="logo-bracket">]</span>
+          <span class="logo-tag">~# root</span>
+        </div>
+        <div class="nav-uptime">
+          <span class="uptime-dot"></span>
+          <span class="uptime-label">SYS:</span>
+          <span id="nav-clock" class="uptime-value">00:00:00</span>
+        </div>
+      </div>
 
-            </div>
+      <div class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link active" data-section="home"><span class="link-num">01.</span><span class="link-text">HOME</span></a>
+        <a href="#about" class="nav-link" data-section="about"><span class="link-num">02.</span><span class="link-text">ABOUT</span></a>
+        <a href="#skills" class="nav-link" data-section="skills"><span class="link-num">03.</span><span class="link-text">ARSENAL</span></a>
+        <a href="#projects" class="nav-link" data-section="projects"><span class="link-num">04.</span><span class="link-text">OPS</span></a>
+        <a href="#blog" class="nav-link" data-section="blog"><span class="link-num">05.</span><span class="link-text">INTEL</span></a>
+        <a href="#contact" class="nav-link nav-link--cta" data-section="contact"><span class="link-text">CONTACT</span><span class="cta-arrow">&#8599;</span></a>
+      </div>
+
+      <div class="nav-right">
+        <div class="nav-status">
+          <div class="status-item"><span class="status-led status-led--green"></span><span class="status-text">SECURE</span></div>
+          <div class="status-item"><span class="status-led status-led--amber"></span><span class="status-text">KOL/IN</span></div>
+        </div>
+        <div class="nav-toggle" id="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+    <div class="nav-progress" id="nav-progress"></div>
+  </nav>
+
+  <main class="main-content">
+
+    <!-- HOME -->
+    <section id="home" class="section active">
+      <canvas id="matrixCanvas" class="matrix-canvas"></canvas>
+      <div class="matrix-overlay"></div>
+      <div class="hero-container fade-in-up">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-text">INITIALIZING PROFILE...</span>
+            <span class="eyebrow-line"></span>
+          </div>
+          <div class="hero-name"><span class="name-text">ROUSON_DAS</span></div>
+          <div class="hero-role-strip">
+            <span class="role-label">root@kali:</span>
+            <span class="role-slash">~$&nbsp;</span>
+            <span class="typing-text" id="typing-text"></span>
+            <span class="cursor">&#9608;</span>
+          </div>
+          <div class="hero-social-links">
+            <a href="https://www.linkedin.com/in/rouson-das-563b52284" class="social-icon-link" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin-in"></i><span class="social-tooltip">LinkedIn</span>
+            </a>
+            <a href="https://github.com/ROSHAN-Z89" class="social-icon-link" title="GitHub" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i><span class="social-tooltip">GitHub</span>
+            </a>
+            <a href="https://linktr.ee/DR05HAN_27" class="social-icon-link" title="Linktree" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-link"></i><span class="social-tooltip">Linktree</span>
+            </a>
+          </div>
+          <div class="hero-buttons">
+            <button class="btn btn-primary cta-button" data-section="contact"><span class="btn-icon">&#9889;</span> Hack with Rouson</button>
+            <button class="btn btn-secondary cta-button" id="downloadResumeBtn"><span class="btn-icon">&#8595;</span> RESUME</button>
+          </div>
         </div>
 
-        <div id="loader-announcer" class="sr-only" aria-live="polite"></div>
-    </div>
-
-
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="terminal-icon">HACKER</span>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link active" data-section="home">HOME</a>
-                <a href="#about" class="nav-link" data-section="about">ABOUT</a>
-                <a href="#skills" class="nav-link" data-section="skills">SKILLS</a>
-                <a href="#projects" class="nav-link" data-section="projects">PROJECTS</a>
-                <a href="#blog" class="nav-link" data-section="blog">BLOG</a>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        <div class="hero-terminal">
+          <div class="ht-header">
+            <div class="term-dots"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
+            <span class="ht-title">whoami.sh</span>
+          </div>
+          <div class="ht-body">
+            <p><span class="ht-prompt">$</span> <span class="ht-cmd">cat /etc/profile</span></p>
+            <p class="ht-out ht-green">NAME    : Rouson Das</p>
+            <p class="ht-out ht-green">ROLE    : Cybersecurity Learner</p>
+            <p class="ht-out ht-green">EDU     : B.Tech ECE &mdash; MAKAUT</p>
+            <p class="ht-out ht-green">STATUS  : Open to Opportunities</p>
+            <p class="ht-out ht-green">LOC     : Kolkata, India</p>
+            <p>&nbsp;</p>
+            <p><span class="ht-prompt">$</span> <span class="ht-cmd">cat /etc/skills | head</span></p>
+            <p class="ht-out ht-amber">&rarr; Ethical Hacking</p>
+            <p class="ht-out ht-amber">&rarr; Penetration Testing</p>
+            <p class="ht-out ht-amber">&rarr; Security Tool Dev</p>
+            <p class="ht-out ht-amber">&rarr; CTF Competition</p>
+            <p>&nbsp;</p>
+            <p><span class="ht-prompt">$</span> <span class="ht-blink">_</span></p>
+          </div>
         </div>
-    </nav>
-
-
-    
-    </div>
-
-
-    <main class="main-content">
-
-        <section id="home" class="section active">
-            <canvas id="matrixCanvas" class="matrix-canvas"></canvas>
-            <div class="matrix-overlay"></div>
-            <div class="hero-container fade-in-up">
-                <div class="hero-content">
-                    <div class="hero-name">
-                        <span class="name-text">ROUSON_DAS</span>
-                    </div>
-                    <p class="hero-subtitle">
-                        <span class="typing-text" id="typing-text"></span>
-                        <span class="cursor">|</span>
-                    </p>
-                    
-                    <!-- Social Media Icons - ADD THIS SECTION -->
-                    <div class="hero-social-links">
-                        <a href="https://www.linkedin.com/in/rouson-das-563b52284" class="social-icon-link" title="LinkedIn" img src="/assets/socials/linkedin.webp" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/Rouson-Z89" class="social-icon-link" title="GitHub" target="_blank" img src="/assets/socials/github.svg" rel="noopener noreferrer">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linktr.ee/DR05HAN_27" class="social-icon-link" title="Linktree" target="_blank" img src="/assets/socials/linktree.svg" rel="noopener noreferrer">
-                            <i class="fas fa-link"></i>
-                        </a>
-                    </div>
-
-                    <div class="hero-buttons">
-                        <button class="btn btn-primary cta-button" data-section="contact">Hack with Rouson</button>
-                        <button class="btn btn-secondary cta-button" id="downloadResumeBtn">RESUME</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title fade-in-up">ABOUT ME</h2>
-                <p class="section-subtitle fade-in-up">
-                    <span id="typing-animation" class="typing-animation"></span>
-                </p>
-                <div id="about-content" class="about-fadein" style="display:none;">
-                    <div class="about-grid fade-in-up">
-                        <div class="about-card">
-                            <div class="profile-avatar">RD</div>
-                            <h3 class="profile-name">Rouson DAS</h3>
-                            <p class="profile-title">Cybersecurity Learner & ECE Undergrad</p>
-                            <div class="profile-info">
-                                <p><span class="info-label">EDUCATION:</span> <i>B.Tech in </i><i>Electronics And
-                                        Communication Engineering</i><br> <i>MAKAUT University</i></p>
-                                <p><span class="info-label">GRADUATION:</span> <i>Expected 2027</i></p>
-                                <p><span class="info-label">FOCUS AREAS:</span> <i>Ethical Hacking, Web Security & Cyber
-                                        Defence</i> </p>
-                                <p><span class="info-label">STATUS:</span> <i>Open to Internship & Collaboration
-                                        Opportunities</i></p>
-                            </div>
-                        </div>
-                        <div class="about-description">
-                            <div class="glass-card">
-                                <h3>whoami_?</h3>
-                                <i>
-                                    <p>Rouson is currently pursuing <b>BTech in Electronics and Communication
-                                            Engineering</b>, with a strong passion for <b>Cybersecurity, Programming,
-                                            and Hardware Systems.</b> His academic foundation is complemented by
-                                        hands-on experience in <b>embedded systems, ethical hacking, and building
-                                            security tools</b>. He enjoys exploring the evolving landscape of
-                                        <b>cybersecurity</b>, focusing on <b>identifying vulnerabilities, strengthening
-                                            defenses, and building secure digital ecosystems</b>. </p>
-                                    <p>Driven by curiosity and a problem-solving mindset, Rouson actively engages in
-                                        <b>security-oriented projects</b> that focus on <b>ethical hacking, penetration
-                                            testing, and threat analysis</b>. He has also participated in <b>hackathons,
-                                            capture-the-flag (CTF) events, and developer festivals (DevFests)</b> that
-                                        have strengthened his skills in cybersecurity, threat analysis, and real-world
-                                        problem solving. </p>
-                                    <p>His work often loves to <b>identify vulnerabilities</b> and <b>build defense
-                                            mechanisms</b> to safeguard digital infrastructure. He is dedicated to
-                                        <b>continuous learning and collaboration within the tech community</b>, aims to
-                                        develop <b>robust, secure, and scalable systems</b> that advance the future of
-                                        <b>cybersecurity and technology</b>. </p>
-                                </i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-        <section id="skills" class="section">
-            <div class="container">
-                <h2 class="section-title fade-in-up">TECHNICAL_EXPERTISE</h2>
-                <p class="section-subtitle fade-in-up">Fluent in the languages of code, security, and defense</p>
-
-
-                <div class="skills-group fade-in-up">
-                    <h3 class="skills-group-title">CURRENTLY LEARNING</h3>
-                    <div class="skills-list">
-
-                        <div class="skill-item learning-item"
-                            data-description="Cybersecurity competitions and challenges">
-                            <img src="./assets/images/ctf.png" alt="Capture The Flag" class="skill-icon">
-                            <span class="skill-name">CAPTURE THE FLAG (CTF)</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="_blank"></div>
-                            </div>
-                            <span class="skill-level">LEARNING</span>
-                        </div>
-                        <div class="skill-item learning-item" data-description="Web Application Pentesting">
-                            <img src="./assets/images/webPentesting.png" alt="Web Pentesting" class="skill-icon">
-                            <span class="skill-name">WEB APPLICATION PENTESTING</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="40%"></div>
-                            </div>
-                            <span class="skill-level">LEARNING</span>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="skills-group fade-in-up">
-                    <h3 class="skills-group-title">SECURITY TOOLS & FRAMEWORKS</h3>
-                    <div class="skills-list">
-                        <div class="skill-item" data-description="Web application security testing tool">
-                            <img src="./assets/images/burpsuite.svg" alt="Burp Suite" class="skill-icon">
-                            <span class="skill-name">BURP SUITE</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="25%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-description="Network discovery and security auditing tool">
-                            <img src="./assets/images/nmap.webp" alt="Nmap" class="skill-icon">
-                            <span class="skill-name">NMAP</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-description="Penetration testing framework">
-                            <img src="./assets/images/metasploit.svg" alt="Metasploit" class="skill-icon">
-                            <span class="skill-name">METASPLOIT</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-description="Network protocol analyzer">
-                            <img src="./assets/images/wireshark.png" alt="Wireshark" class="skill-icon">
-                            <span class="skill-name">WIRESHARK</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="50%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-description="Directory & DNS brute-forcing tool for web recon">
-                            <img src="./assets/images/gobuster.svg" alt="Gobuster" class="skill-icon">
-                            <span class="skill-name">GOBUSTER</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="50%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item"
-                            data-description="Networking utility for reading/writing across connections">
-                            <img src="./assets/images/netcat.svg" alt="Netcat" class="skill-icon">
-                            <span class="skill-name">NETCAT</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="50%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-description="Password Cracking Tool">
-                            <img src="./assets/images/hydra.svg" alt="Hydra" class="skill-icon">
-                            <span class="skill-name">HYDRA</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="30%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-description="Software Reverse Engineering Framework">
-                            <img src="./assets/images/ghidra.webp" alt="Ghidra" class="skill-icon">
-                            <span class="skill-name">GHIDRA</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="10%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-description="Privilege Escalation Tool">
-                            <img src="./assets/images/peas.png" alt="Peas" class="skill-icon">
-                            <span class="skill-name">PEAS</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="30%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="skills-group fade-in-up">
-                    <h3 class="skills-group-title">CODE ARSENAL</h3>
-                    <div class="skills-list">
-                        <div class="skill-item" data-description="Markup language for web pages">
-                            <img src="./assets/images/HTML5.svg" alt="Html" class="skill-icon">
-                            <span class="skill-name">HTML5</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item"
-                            data-description="Style sheet language for designing responsive and visually appealing web pages">
-                            <img src="./assets/images/CSS3.svg" alt="Css" class="skill-icon">
-                            <span class="skill-name">CSS3</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-description="Client-side scripting language for web">
-                            <img src="./assets/images/PHP.svg" alt="Php" class="skill-icon">
-                            <span class="skill-name">PHP</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="70%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-description="Client-side scripting language for web">
-                            <img src="./assets/images/javascript.svg" alt="JavaScript" class="skill-icon">
-                            <span class="skill-name">JAVASCRIPT</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="65%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-description="JavaScript UI framework">
-                            <img src="./assets/images/react.svg" alt="React" class="skill-icon">
-                            <span class="skill-name">REACT</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="70%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item"
-                            data-description="Runtime environment for executing JavaScript on the server side">
-                            <img src="./assets/images/node.svg" alt="Nodejs" class="skill-icon">
-                            <span class="skill-name">NODE</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="50%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item"
-                            data-description="Utility-first CSS framework for rapidly building modern, responsive UIs">
-                            <img src="./assets/images/Tailwind CSS.svg" alt="Tailwind Css" class="skill-icon">
-                            <span class="skill-name">TAILWIND CSS</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="70%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-description="API testing and collaboration tool">
-                            <img src="./assets/images/Postman.svg" alt="Postman" class="skill-icon">
-                            <span class="skill-name">POSTMAN</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="50%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-description="Versatile scripting language">
-                            <img src="./assets/images/python.svg" alt="Python" class="skill-icon">
-                            <span class="skill-name">PYTHON</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-description="Low-level programming language">
-                            <img src="./assets/images/C.svg" alt="C" class="skill-icon">
-                            <span class="skill-name">C</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-description="Object-oriented programming language">
-                            <img src="./assets/images/Cplusplus.svg" alt="C++" class="skill-icon">
-                            <span class="skill-name">C++</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="70%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-description="Platform-independent programming language">
-                            <img src="./assets/images/java.svg" alt="Java" class="skill-icon">
-                            <span class="skill-name">JAVA</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="40%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-description="Low-level machine language programming">
-                            <img src="./assets/images/assembly.svg" alt="Assembly" class="skill-icon">
-                            <span class="skill-name">ASSEMBLY</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="15%"></div>
-                            </div>
-
-                        </div>
-                        <div class="skill-item" data-description="Unix shell scripting language">
-                            <img src="./assets/images/bash.svg" alt="Bash" class="skill-icon">
-                            <span class="skill-name">BASH</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item"
-                            data-description="Task automation and scripting language for Windows environments">
-                            <img src="./assets/images/powershell.svg" alt="PowerShell" class="skill-icon">
-                            <span class="skill-name">POWERSHELL</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="65%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="skills-group fade-in-up">
-                    <h3 class="skills-group-title">DATABASES</h3>
-                    <div class="skills-list">
-                        <div class="skill-item" data-description="Relational database management system">
-                            <img src="./assets/images/mysql.svg" alt="MySQL" class="skill-icon">
-                            <span class="skill-name">MYSQL</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-description="Relational database management system">
-                            <img src="./assets/images/postgresql.svg" alt="PostgreSQL" class="skill-icon">
-                            <span class="skill-name">POSTGRESQL</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="65%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-description="NoSQL document database">
-                            <img src="./assets/images/mongo.svg" alt="MongoDB" class="skill-icon">
-                            <span class="skill-name">MONGODB</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="75%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="skills-group fade-in-up">
-                    <h3 class="skills-group-title">OPERATING SYSTEMS</h3>
-                    <div class="skills-list">
-                        <div class="skill-item" data-description="Microsoft operating system">
-                            <img src="./assets/images/windows.png" alt="Windows" class="skill-icon">
-                            <span class="skill-name">WINDOWS</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="90%"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item" data-description="Linux distribution for development">
-                            <img src="./assets/images/ubuntu.svg" alt="Ubuntu" class="skill-icon">
-                            <span class="skill-name">UBUNTU</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="85%"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item" data-description="Penetration testing Linux distribution">
-                            <img src="./assets/images/kali.svg" alt="Kali Linux" class="skill-icon">
-                            <span class="skill-name">KALI LINUX</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="88%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="skills-group fade-in-up">
-                    <h3 class="skills-group-title">EMBEDDED SYSTEMS</h3>
-                    <div class="skills-list">
-                        <div class="skill-item"
-                            data-description="Open-source hardware platform for building electronics and IoT projects">
-                            <img src="./assets/images/arduino.svg" alt="Python" class="skill-icon">
-                            <span class="skill-name">ARDUINO</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="70%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="skills-group fade-in-up">
-                    <h3 class="skills-group-title">VERSION CONTROL</h3>
-                    <div class="skills-list">
-                        <div class="skill-item"
-                            data-description="Version control platform for code collaboration and project management">
-                            <img src="./assets/images/github.svg" alt="Github" class="skill-icon">
-                            <span class="skill-name">GIT & GITHUB</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="85%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="skills-group fade-in-up">
-                    <h3 class="skills-group-title">OTHERS</h3>
-                    <div class="skills-list">
-                        <div class="skill-item" data-description="Collaborative UI/UX prototyping tool">
-                            <img src="./assets/images/Figma.svg" alt="Figma" class="skill-icon">
-                            <span class="skill-name">FIGMA</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item"
-                            data-description="Online design tool for creating quick, accessible visuals and graphics">
-                            <img src="./assets/images/Canva.svg" alt="Canva" class="skill-icon">
-                            <span class="skill-name">CANVA</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item"
-                            data-description="Professional tool for image editing, digital art, and graphic design">
-                            <img src="./assets/images/Photoshop.svg" alt="Photoshop" class="skill-icon">
-                            <span class="skill-name">ADOBE PHOTOSHOP</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-description="Photo editing & enhancements">
-                            <img src="./assets/images/Lightroom.png" alt="Lightroom" class="skill-icon">
-                            <span class="skill-name">ADOBE LIGHTROOM</span>
-                            <div class="proficiency-bar">
-                                <div class="proficiency-fill" data-width="90%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="skills-group fade-in-up">
-                    <h3 class="skills-group-title">SOFT SKILLS</h3>
-                    <div class="soft-skills-list">
-                        <div class="soft-skill-badge">
-                            <div class="skill-icon">COM</div>
-                            <span class="soft-skill-name">COMMUNICATION</span>
-                        </div>
-                        <div class="soft-skill-badge">
-                            <div class="skill-icon">LEAD</div>
-                            <span class="soft-skill-name">LEADERSHIP</span>
-                        </div>
-                        <div class="soft-skill-badge">
-                            <div class="skill-icon">TEAM</div>
-                            <span class="soft-skill-name">TEAMWORK</span>
-                        </div>
-                        <div class="soft-skill-badge">
-                            <div class="skill-icon">STRAT</div>
-                            <span class="soft-skill-name">STRATEGIC THINKING</span>
-                        </div>
-                        <div class="soft-skill-badge">
-                            <div class="skill-icon">PROB</div>
-                            <span class="soft-skill-name">PROBLEM SOLVING</span>
-                        </div>
-                        <div class="soft-skill-badge">
-                            <div class="skill-icon">ADAPT</div>
-                            <span class="soft-skill-name">ADAPTABILITY</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="projects" class="section">
-            <div class="container">
-                <h2 class="section-title fade-in-up">FEATURED_PROJECTS</h2>
-                <p class="section-subtitle fade-in-up">Projects Arsenal</p>
-
-                <div class="projects-grid fade-in-up">
-
-                    <!-- <div class="project-card project--ongoing">
-                        <div class="ongoing-indicator">
-                            <div class="pulse-dot"></div>
-                            <span>IN PROGRESS</span>
-                        </div>
-                        <h3 class="project-title">DARK WEB MONITORING SYSTEM</h3>
-                        <p class="project-description">Comprehensive dark web monitoring solution for threat
-                            intelligence gathering, credential leak detection, and automated alerting system with secure
-                            Tor network integration.</p>
-                        <div class="project-tech-stack">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Tor Network</span>
-                            <span class="tech-badge">Threat Intel</span>
-                            <span class="tech-badge">Automation</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Rouson-Z89" class="github-link" target="_blank"
-                                rel="noopener noreferrer">VIEW CODE</a>
-                        </div>
-                    </div> -->
-                    
-                    <div class="project-card project--completed">
-                        <h3 class="project-title">FILE ENCRYPTION SYSTEM</h3>
-                        <p class="project-description">
-                            Linux-based security framework enforcing two-factor authentication (TOTP)
-                            for file encryption and decryption using AES-256. Access is granted only
-                            when both cryptographic keys and time-synchronized OTPs are validated.
-                        </p>
-                        <div class="project-tech-stack">
-                            <span class="tech-badge">Bash</span>
-                            <span class="tech-badge">AES-256</span>
-                            <span class="tech-badge">TOTP</span>
-                            <span class="tech-badge">Linux Security</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/ROSHAN-Z89/2-Factor-Authentication-System" class="github-link" target="_blank"
-                                rel="noopener noreferrer">VIEW CODE</a>
-                        </div>
-                    </div>
-
-                    
-                    <div class="project-card project--completed">
-                        <h3 class="project-title">VULNERABILITY SEEKER</h3>
-                        <p class="project-description">
-                            Python-based TCP and UDP vulnerability assessment tool that performs
-                            banner grabbing, subnet scanning, and signature-based detection of
-                            misconfigured or outdated network services using a local vulnerability database.
-                        </p>
-                        <div class="project-tech-stack">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Network Security</span>
-                            <span class="tech-badge">TCP/UDP Scanning</span>
-                            <span class="tech-badge">Vulnerability Assessment</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/ROSHAN-Z89/Vulnerability-Assessment" class="github-link" target="_blank"
-                                rel="noopener noreferrer">VIEW CODE</a>
-                        </div>
-                    </div>
-
-
-                    <div class="project-card project--completed">
-                        <h3 class="project-title">URL SECURITY ANALYZER</h3>
-                        <p class="project-description">Advanced Python-based security tool for analyzing and validating
-                            URLs, detecting potential threats, SSRF vulnerabilities, and suspicious schemes with
-                            comprehensive reporting capabilities.</p>
-                        <div class="project-tech-stack">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Security</span>
-                            <span class="tech-badge">OSINT</span>
-                            <span class="tech-badge">API Integration</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Rouson-Z89/URL_ANALYZER" class="github-link" target="_blank"
-                                rel="noopener noreferrer">VIEW CODE</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card project--completed">
-                        <h3 class="project-title">PORTFOLIO WEBSITE</h3>
-                        <p class="project-description">
-                            Personal portfolio website showcasing cybersecurity projects, technical skills, and
-                            professional profile.
-                            Features dark/light themes, terminal loader animations, interactive skills section, and
-                            responsive design for seamless user experience.
-                        </p>
-                        <div class="project-tech-stack">
-                            <span class="tech-badge">HTML</span>
-                            <span class="tech-badge">CSS</span>
-                            <span class="tech-badge">JavaScript</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Rouson-Z89/Portfolio" class="github-link" target="_blank"
-                                rel="noopener noreferrer">VIEW CODE</a>
-                        </div>
-                    </div>
-
-
-                    <div class="project-card project--completed">
-                        <h3 class="project-title">KEYLOGGER</h3>
-                        <p class="project-description">
-                            Lightweight Python-based security tool for capturing and logging keystrokes, built to
-                            demonstrate input monitoring techniques and strengthen ethical cybersecurity research
-                            skills.
-                        </p>
-                        <div class="project-tech-stack">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Security</span>
-                            <span class="tech-badge">Keylogger</span>
-                            <span class="tech-badge">Monitotring</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Rouson-Z89/Keylogger" class="github-link" target="_blank"
-                                rel="noopener noreferrer">VIEW CODE</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card project--completed">
-                        <h3 class="project-title">PASSWORD GENERATOR</h3>
-                        <p class="project-description">
-                            Python tool for generating strong, customizable, and secure passwords with randomness and
-                            user-defined rules.
-                        </p>
-                        <div class="project-tech-stack">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Security</span>
-                            <span class="tech-badge">Password Generation</span>
-                            <span class="tech-badge">Encryption</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Rouson-Z89/PassGenerator" class="github-link" target="_blank"
-                                rel="noopener noreferrer">VIEW CODE</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card project--completed">
-                        <h3 class="project-title">Arduino Object Sensor </h3>
-                        <p class="project-description">
-                            Arduino-based embedded system utilizing IR sensors for accurate object detection and
-                            proximity sensing, capable of triggering automated responses in real-time applications.
-                        </p>
-                        <div class="project-tech-stack">
-                            <span class="tech-badge">Arduino</span>
-                            <span class="tech-badge">Embedded Systems</span>
-                            <span class="tech-badge">IR Sensor</span>
-                            <span class="tech-badge">Object Detection</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Rouson-Z89/IOT" class="github-link" target="_blank"
-                                rel="noopener noreferrer">VIEW CODE</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card project--completed">
-                        <h3 class="project-title">PORT SCANNER </h3>
-                        <p class="project-description">
-                            Python-based tool for scanning target systems to identify open ports and running services,
-                            enabling network security assessment and vulnerability detection in real-time environments.
-                        </p>
-                        <div class="project-tech-stack">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Networking</span>
-                            <span class="tech-badge">Security</span>
-                            <span class="tech-badge">Port Scanning</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Rouson-Z89/Port-Scanner" class="github-link" target="_blank"
-                                rel="noopener noreferrer">VIEW CODE</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card project--completed">
-                        <h3 class="project-title">TO-DO LIST </h3>
-                        <p class="project-description">
-                            Interactive web application to manage daily tasks efficiently, featuring task creation,
-                            editing, completion tracking, and persistent storage for organized workflow.
-                        </p>
-                        <div class="project-tech-stack">
-                            <span class="tech-badge">HTML</span>
-                            <span class="tech-badge">CSS</span>
-                            <span class="tech-badge">JavaScript</span>
-                            <span class="tech-badge">Web App</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Rouson-Z89/To-Do-List" class="github-link" target="_blank"
-                                rel="noopener noreferrer">VIEW CODE</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card project--completed">
-                        <h3 class="project-title">CALCULATOR </h3>
-                        <p class="project-description">
-                            Simple yet functional calculator application supporting basic arithmetic operations,
-                            designed with a clean UI for quick and accurate calculations.
-                        </p>
-                        <div class="project-tech-stack">
-                            <span class="tech-badge">HTML</span>
-                            <span class="tech-badge">CSS</span>
-                            <span class="tech-badge">JavaScript</span>
-                            <span class="tech-badge">Web App</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Rouson-Z89/Calculator" class="github-link" target="_blank"
-                                rel="noopener noreferrer">VIEW CODE</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="blog" class="section">
-            <div class="container">
-                <h2 class="section-title fade-in-up">CYBERSECURITY_BLOGS</h2>
-                <p class="section-subtitle fade-in-up">Latest insights on security research and vulnerability analysis
-                </p>
-
-                <div class="blog-grid fade-in-up">
-
-                    <article class="blog-card">
-                        <div class="blog-image">
-                            <img src="assets/banner/proxy.webp" alt="proxy and proxy server explained" loading="lazy">
-                            <div class="blog-category">PROXY - ALL YOU NEED TO KNOW</div>
-                        </div>
-                        <div class="blog-content">
-                            <h3 class="blog-title">Proxy - All You Need to Know</h3>
-                            <p class="blog-description">
-                                Discover how proxies work, the difference between a proxy and a proxy server, and why
-                                they're essential
-                                for online privacy and security. Learn about types of proxies, what data is shared, and
-                                how they keep
-                                your IP hidden while browsing.
-                            </p>
-                            <div class="blog-meta">
-                                <span class="blog-date">Published on Hashnode</span>
-                                <span class="blog-readtime">5 min read</span>
-                            </div>
-                            <a href="https://rootiq.hashnode.dev/proxy-all-you-need-to-know" target="_blank"
-                                rel="noopener noreferrer" class="read-more-btn">
-                                <span>READ_MORE</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M7 17L17 7"></path>
-                                    <path d="M7 7H17V17"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card">
-                        <div class="blog-image">
-                            <img src="assets/banner/supplychainattack.webp" alt="npm Supply Chain Attack"
-                                loading="lazy">
-                            <div class="blog-category">SUPPLY CHAIN ATTACK</div>
-                        </div>
-                        <div class="blog-content">
-                            <h3 class="blog-title">npm Supply Chain Attack - Shai-Hulud Worm</h3>
-                            <p class="blog-description">A look at the September 2025 npm supply chain attack, where
-                                phishing led to compromised maintainer accounts and malicious updates to popular
-                                libraries like <em>debug</em>, <em>chalk</em>, and <em>ansi-styles</em>. We break down
-                                its rapid spread and the defenses developers must adopt.</p>
-                            <div class="blog-meta">
-                                <span class="blog-date">Published on Hashnode</span>
-                                <span class="blog-readtime">3 min read</span>
-                            </div>
-                            <a href="https://rootiq.hashnode.dev/supply-chain-attack" target="_blank"
-                                rel="noopener noreferrer" class="read-more-btn">
-                                <span>READ_MORE</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M7 17L17 7"></path>
-                                    <path d="M7 7H17V17"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card">
-                        <div class="blog-image">
-                            <img src="assets/banner/databreach.jpg" alt="Data Breach at Google" loading="lazy">
-                            <div class="blog-category">DATA BREACH</div>
-                        </div>
-                        <div class="blog-content">
-                            <h3 class="blog-title">Data Breach at Google - ShinyHunters Strike Again</h3>
-                            <p class="blog-description">An in-depth analysis of the recent Google data breach
-                                orchestrated by the notorious ShinyHunters group. Examining the attack vectors, impact
-                                assessment, and security implications for enterprise organizations worldwide.
-                            </p>
-                            <div class="blog-meta">
-                                <span class="blog-date">Published on Hashnode</span>
-                                <span class="blog-readtime">5 min read</span>
-                            </div>
-                            <a href="https://rootiq.hashnode.dev/data-breach-at-google-shinyhunters-strike-again"
-                                target="_blank" rel="noopener noreferrer" class="read-more-btn">
-                                <span>READ_MORE</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M7 17L17 7"></path>
-                                    <path d="M7 7H17V17"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="blog-card">
-                        <div class="blog-image">
-                            <img src="assets/banner/CWE787.webp" alt="CWE-787 Out of Bounds Write" loading="lazy">
-                            <div class="blog-category">VULNERABILITY</div>
-                        </div>
-                        <div class="blog-content">
-                            <h3 class="blog-title">Lessons from CWE-787: Out-of-Bounds Write & Why It's Important</h3>
-                            <p class="blog-description">Deep dive into CWE-787 vulnerabilities, exploring out-of-bounds
-                                write attacks, memory corruption techniques, and essential mitigation strategies for
-                                secure software development practices.</p>
-                            <div class="blog-meta">
-                                <span class="blog-date">Published on Hashnode</span>
-                                <span class="blog-readtime">8 min read</span>
-                            </div>
-                            <a href="https://rootiq.hashnode.dev/httpsrootiqhashnodedevout-of-bound-write"
-                                target="_blank" rel="noopener noreferrer" class="read-more-btn">
-                                <span>READ_MORE</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M7 17L17 7"></path>
-                                    <path d="M7 7H17V17"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-
-        <section id="contact" class="section">
-            <div class="container">
-                <h2 class="section-title fade-in-up">GET_IN_TOUCH</h2>
-                <p class="section-subtitle fade-in-up">Ready to collaborate on cybersecurity projects</p>
-
-                <div class="contact-grid fade-in-up">
-                    <div class="contact-card">
-                        <div class="contact-header">
-                            <h3>SEND_MESSAGE</h3>
-                            <p>Interested in cybersecurity collaboration, freelance projects, or full-time
-                                opportunities? Let's connect!</p>
-                        </div>
-
-                        <form class="contact-form" id="contact-form">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="contact-name">FULL NAME</label>
-                                    <input type="text" id="contact-name" name="name" required
-                                        placeholder="Enter your full name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="contact-email">EMAIL ADDRESS</label>
-                                    <input type="email" id="contact-email" name="email" required
-                                        placeholder="rouson.ece@gmail.com">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="contact-subject">SUBJECT</label>
-                                <select id="contact-subject" name="subject" required>
-                                    <option value="">Select a subject...</option>
-                                    <option value="freelance">Freelance Security Project</option>
-                                    <option value="full-time">Full-time Opportunity</option>
-                                    <option value="consultation">Security Consultation</option>
-                                    <option value="collaboration">Research Collaboration</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="contact-message">MESSAGE</label>
-                                <textarea id="contact-message" name="message" rows="6" required
-                                    placeholder="Tell me about your security project or inquiry..."></textarea>
-                            </div>
-
-                            <div class="form-actions">
-                                <button type="submit" class="btn-contact cta-button">
-                                    <span>SEND</span>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="contact-info">
-                        <div class="contact-header">
-                            <h3>CONTACT_INFORMATION</h3>
-                            <p>Professional channels to reach me for secure communications.</p>
-                        </div>
-
-                        <div class="contact-details">
-                            <a href="mailto:rouson.ece@gmail.com" target="_blank" rel="noopener noreferrer"
-                                class="contact-detail-item">
-                                <img src="./assets/socials/mail.svg" alt="Email" class="detail-icon">
-                                <div class="detail-content">
-                                    <h4>EMAIL</h4>
-                                    <p>rouson.ece@gmail.com</p>
-                                    <small>Primary communication channel</small>
-                                </div>
-                            </a>
-
-                            <a href="https://linkedin.com/in/rouson-das-563b52284" target="_blank"
-                                rel="noopener noreferrer" class="contact-detail-item">
-                                <img src="./assets/socials/linkedin.svg" alt="LinkedIn" class="detail-icon">
-                                <div class="detail-content">
-                                    <h4>LINKEDIN</h4>
-                                    <p>rouson-das-563b52284</p>
-                                    <small>Professional networking</small>
-                                </div>
-                            </a>
-
-                            <a href="https://github.com/Rouson-Z89" target="_blank" rel="noopener noreferrer"
-                                class="contact-detail-item">
-                                <img src="./assets/socials/github.svg" alt="GitHub" class="detail-icon">
-                                <div class="detail-content">
-                                    <h4>GITHUB</h4>
-                                    <p>Rouson-Z89</p>
-                                    <small>Open source projects</small>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-
-    <div class="floating-contact" id="floating-contact" title="Contact Me">
-        <img src="./assets/images/message.svg" alt="Message" />
-    </div>
-
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-layout">
-                <div class="social-links">
-                    <a href="https://mail.google.com/mail/?view=cm&to=rouson.ece@gmail.com" class="social-link"
-                        title="Email">
-                        <img src="./assets/socials/mail.svg" alt="Email">
-                    </a>
-
-                    <a href="https://linkedin.com/in/rouson-das-563b52284" target="_blank" rel="noopener noreferrer"
-                        class="social-link" title="LinkedIn">
-                        <img src="./assets/socials/linkedin.svg" alt="LinkedIn">
-                    </a>
-
-                    <a href="https://github.com/Rouson-Z89" target="_blank" rel="noopener noreferrer"
-                        class="social-link" title="GitHub">
-                        <img src="./assets/socials/github.svg" alt="GitHub">
-                    </a>
-                </div>
-                <p class="copyright">© 2025 Rouson Das. All rights reserved.</p>
-                <div class="spacer"></div>
-            </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <div class="section-tag">02 / DOSSIER</div>
+          <h2 class="section-title">ABOUT_ME</h2>
+          <div class="section-line"></div>
         </div>
-    </footer>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="script.js"></script>
+        <div class="about-top fade-in-up">
+          <!-- ID CARD -->
+          <div class="id-card">
+            <div class="idc-header">
+              <span class="idc-label">SECURITY CLEARANCE FILE</span>
+              <span class="idc-id">#RD-2005-ECE</span>
+            </div>
+            <div class="idc-avatar-wrap">
+              <div class="idc-avatar">RD</div>
+              <div class="idc-scan-line"></div>
+            </div>
+            <div class="idc-name">ROUSON DAS</div>
+            <div class="idc-role">Cybersecurity Learner &amp; ECE Undergrad</div>
+            <div class="idc-divider"></div>
+            <div class="idc-fields">
+              <div class="idc-field"><span class="idc-key">EDUCATION</span><span class="idc-val">B.Tech ECE &mdash; MAKAUT University</span></div>
+              <div class="idc-field"><span class="idc-key">GRADUATION</span><span class="idc-val">Expected 2027</span></div>
+              <div class="idc-field"><span class="idc-key">FOCUS</span><span class="idc-val">Ethical Hacking &middot; Web Security &middot; Cyber Defence</span></div>
+              <div class="idc-field"><span class="idc-key">STATUS</span><span class="idc-val idc-val--active">&#9679; OPEN &mdash; Internship &amp; Collaboration</span></div>
+            </div>
+            <div class="idc-barcode">
+              <div class="barcode-bars"></div>
+              <span class="barcode-text">R0US0N-Z89 // KOL-IN</span>
+            </div>
+          </div>
+
+          <!-- TERMINAL BIO -->
+          <div class="about-terminal">
+            <div class="aterm-header">
+              <div class="term-dots"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>
+              <span class="aterm-title">root@r0us0n:~# cat dossier.txt</span>
+            </div>
+            <div class="aterm-body">
+              <div class="aterm-block">
+                <span class="aterm-comment">## OPERATIVE PROFILE</span>
+                <p>Rouson is currently pursuing <strong>BTech in Electronics and Communication Engineering</strong>, with a strong passion for <strong>Cybersecurity, Programming, and Hardware Systems.</strong> His academic foundation is complemented by hands-on experience in <strong>embedded systems, ethical hacking, and building security tools</strong>.</p>
+              </div>
+              <div class="aterm-block">
+                <span class="aterm-comment">## FIELD OPERATIONS</span>
+                <p>Driven by curiosity and a problem-solving mindset, Rouson actively engages in <strong>security-oriented projects</strong> that focus on <strong>ethical hacking, penetration testing, and threat analysis</strong>. He has also participated in <strong>hackathons, capture-the-flag (CTF) events, and developer festivals (DevFests)</strong>.</p>
+              </div>
+              <div class="aterm-block">
+                <span class="aterm-comment">## MISSION OBJECTIVE</span>
+                <p>His work aims to <strong>identify vulnerabilities</strong> and <strong>build defense mechanisms</strong> to safeguard digital infrastructure. He is dedicated to <strong>continuous learning and collaboration</strong>, building <strong>robust, secure, and scalable systems</strong> that advance <strong>cybersecurity and technology</strong>.</p>
+              </div>
+              <div class="aterm-cursor-line">
+                <span class="ht-prompt">root@r0us0n</span><span class="aterm-path">:~/dossier$</span> <span class="ht-blink">_</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-bottom fade-in-up">
+          <div class="about-stats">
+            <div class="stat-card"><div class="stat-icon">&#128737;</div><div class="stat-num" data-target="10">0</div><div class="stat-label">PROJECTS DEPLOYED</div></div>
+            <div class="stat-card"><div class="stat-icon">&#9876;</div><div class="stat-num" data-target="14">0</div><div class="stat-label">MONTHS TRAINING</div></div>
+            <div class="stat-card"><div class="stat-icon">&#128269;</div><div class="stat-num" data-target="4">0</div><div class="stat-label">BLOGS PUBLISHED</div></div>
+            <div class="stat-card"><div class="stat-icon">&#127937;</div><div class="stat-num" data-target="3">0</div><div class="stat-label">CTF / HACKATHONS</div></div>
+          </div>
+
+          <div class="about-timeline">
+            <div class="tl-header">// ACTIVITY LOG</div>
+            <div class="tl-item">
+              <div class="tl-dot tl-dot--green"></div>
+              <div class="tl-content"><span class="tl-date">2024 &mdash; Present</span><span class="tl-event">Actively building cybersecurity tools &amp; publishing research blogs</span></div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot tl-dot--amber"></div>
+              <div class="tl-content"><span class="tl-date">2023 &mdash; 2024</span><span class="tl-event">Participated in Hackathons, CTF events &amp; DevFests</span></div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot tl-dot--cyan"></div>
+              <div class="tl-content"><span class="tl-date">2023</span><span class="tl-event">Began B.Tech ECE at MAKAUT &mdash; started self-led security training</span></div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot tl-dot--dim"></div>
+              <div class="tl-content"><span class="tl-date">&rarr; 2027</span><span class="tl-event">Expected graduation &amp; full-time cybersecurity role</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARSENAL / SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <div class="section-tag">03 / ARSENAL</div>
+          <h2 class="section-title">TECHNICAL_EXPERTISE</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">Fluent in the languages of code, security, and defense</p>
+        </div>
+
+        <div class="arsenal-tabs fade-in-up" id="arsenal-tabs">
+          <button class="atab active" data-cat="all">ALL</button>
+          <button class="atab" data-cat="learning">LEARNING</button>
+          <button class="atab" data-cat="security">SEC TOOLS</button>
+          <button class="atab" data-cat="code">CODE</button>
+          <button class="atab" data-cat="db">DATABASE</button>
+          <button class="atab" data-cat="os">OS</button>
+          <button class="atab" data-cat="other">OTHER</button>
+        </div>
+
+        <div class="arsenal-grid fade-in-up" id="arsenal-grid">
+
+          <div class="skill-card" data-cat="learning" data-description="Cybersecurity competitions and challenges">
+            <div class="sc-accent learning-accent"></div>
+            <div class="sc-header"><img src="./assets/images/ctf.png" alt="CTF" class="sc-icon"><div class="sc-badge sc-badge--learning">LEARNING</div></div>
+            <div class="sc-name">CAPTURE THE FLAG</div>
+            <div class="sc-desc">Cybersecurity competitions &amp; challenges</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill learning-fill" data-width="35%"></div></div><span class="sc-pct">35%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="learning" data-description="Web Application Pentesting">
+            <div class="sc-accent learning-accent"></div>
+            <div class="sc-header"><img src="./assets/images/webPentesting.png" alt="Web Pentesting" class="sc-icon"><div class="sc-badge sc-badge--learning">LEARNING</div></div>
+            <div class="sc-name">WEB APP PENTESTING</div>
+            <div class="sc-desc">Attacking &amp; securing web applications</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill learning-fill" data-width="40%"></div></div><span class="sc-pct">40%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="security" data-description="Web application security testing tool">
+            <div class="sc-accent security-accent"></div>
+            <div class="sc-header"><img src="./assets/images/burpsuite.svg" alt="Burp Suite" class="sc-icon"><div class="sc-badge sc-badge--security">SEC TOOL</div></div>
+            <div class="sc-name">BURP SUITE</div>
+            <div class="sc-desc">Web application security testing</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill security-fill" data-width="25%"></div></div><span class="sc-pct">25%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="security" data-description="Network discovery and security auditing">
+            <div class="sc-accent security-accent"></div>
+            <div class="sc-header"><img src="./assets/images/nmap.webp" alt="Nmap" class="sc-icon"><div class="sc-badge sc-badge--security">SEC TOOL</div></div>
+            <div class="sc-name">NMAP</div>
+            <div class="sc-desc">Network discovery &amp; security auditing</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill security-fill" data-width="90%"></div></div><span class="sc-pct">90%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="security" data-description="Penetration testing framework">
+            <div class="sc-accent security-accent"></div>
+            <div class="sc-header"><img src="./assets/images/metasploit.svg" alt="Metasploit" class="sc-icon"><div class="sc-badge sc-badge--security">SEC TOOL</div></div>
+            <div class="sc-name">METASPLOIT</div>
+            <div class="sc-desc">Penetration testing framework</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill security-fill" data-width="75%"></div></div><span class="sc-pct">75%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="security" data-description="Network protocol analyzer">
+            <div class="sc-accent security-accent"></div>
+            <div class="sc-header"><img src="./assets/images/wireshark.png" alt="Wireshark" class="sc-icon"><div class="sc-badge sc-badge--security">SEC TOOL</div></div>
+            <div class="sc-name">WIRESHARK</div>
+            <div class="sc-desc">Network protocol analyzer</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill security-fill" data-width="50%"></div></div><span class="sc-pct">50%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="security" data-description="Directory and DNS brute-forcing for web recon">
+            <div class="sc-accent security-accent"></div>
+            <div class="sc-header"><img src="./assets/images/gobuster.svg" alt="Gobuster" class="sc-icon"><div class="sc-badge sc-badge--security">SEC TOOL</div></div>
+            <div class="sc-name">GOBUSTER</div>
+            <div class="sc-desc">Directory &amp; DNS brute-forcing</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill security-fill" data-width="50%"></div></div><span class="sc-pct">50%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="security" data-description="Networking utility for reading/writing across connections">
+            <div class="sc-accent security-accent"></div>
+            <div class="sc-header"><img src="./assets/images/netcat.svg" alt="Netcat" class="sc-icon"><div class="sc-badge sc-badge--security">SEC TOOL</div></div>
+            <div class="sc-name">NETCAT</div>
+            <div class="sc-desc">TCP/UDP networking utility</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill security-fill" data-width="50%"></div></div><span class="sc-pct">50%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="security" data-description="Password Cracking Tool">
+            <div class="sc-accent security-accent"></div>
+            <div class="sc-header"><img src="./assets/images/hydra.svg" alt="Hydra" class="sc-icon"><div class="sc-badge sc-badge--security">SEC TOOL</div></div>
+            <div class="sc-name">HYDRA</div>
+            <div class="sc-desc">Online password cracking</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill security-fill" data-width="30%"></div></div><span class="sc-pct">30%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="security" data-description="Software Reverse Engineering Framework">
+            <div class="sc-accent security-accent"></div>
+            <div class="sc-header"><img src="./assets/images/ghidra.webp" alt="Ghidra" class="sc-icon"><div class="sc-badge sc-badge--security">SEC TOOL</div></div>
+            <div class="sc-name">GHIDRA</div>
+            <div class="sc-desc">Software reverse engineering</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill security-fill" data-width="10%"></div></div><span class="sc-pct">10%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="security" data-description="Privilege Escalation Tool">
+            <div class="sc-accent security-accent"></div>
+            <div class="sc-header"><img src="./assets/images/peas.png" alt="PEAS" class="sc-icon"><div class="sc-badge sc-badge--security">SEC TOOL</div></div>
+            <div class="sc-name">PEAS</div>
+            <div class="sc-desc">Privilege escalation toolkit</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill security-fill" data-width="30%"></div></div><span class="sc-pct">30%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="code" data-description="Markup language for web pages">
+            <div class="sc-accent code-accent"></div>
+            <div class="sc-header"><img src="./assets/images/HTML5.svg" alt="HTML5" class="sc-icon"><div class="sc-badge sc-badge--code">CODE</div></div>
+            <div class="sc-name">HTML5</div>
+            <div class="sc-desc">Web markup language</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill code-fill" data-width="90%"></div></div><span class="sc-pct">90%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="code" data-description="Style sheet language for responsive web design">
+            <div class="sc-accent code-accent"></div>
+            <div class="sc-header"><img src="./assets/images/CSS3.svg" alt="CSS3" class="sc-icon"><div class="sc-badge sc-badge--code">CODE</div></div>
+            <div class="sc-name">CSS3</div>
+            <div class="sc-desc">Styling &amp; responsive design</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill code-fill" data-width="90%"></div></div><span class="sc-pct">90%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="code" data-description="Client-side scripting language">
+            <div class="sc-accent code-accent"></div>
+            <div class="sc-header"><img src="./assets/images/JS.svg" alt="JavaScript" class="sc-icon"><div class="sc-badge sc-badge--code">CODE</div></div>
+            <div class="sc-name">JAVASCRIPT</div>
+            <div class="sc-desc">Client-side scripting</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill code-fill" data-width="75%"></div></div><span class="sc-pct">75%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="code" data-description="General-purpose programming language">
+            <div class="sc-accent code-accent"></div>
+            <div class="sc-header"><img src="./assets/images/python.svg" alt="Python" class="sc-icon"><div class="sc-badge sc-badge--code">CODE</div></div>
+            <div class="sc-name">PYTHON</div>
+            <div class="sc-desc">Security scripting &amp; automation</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill code-fill" data-width="85%"></div></div><span class="sc-pct">85%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="code" data-description="Low-level systems programming language">
+            <div class="sc-accent code-accent"></div>
+            <div class="sc-header"><img src="./assets/images/c.svg" alt="C" class="sc-icon"><div class="sc-badge sc-badge--code">CODE</div></div>
+            <div class="sc-name">C</div>
+            <div class="sc-desc">Systems &amp; low-level programming</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill code-fill" data-width="70%"></div></div><span class="sc-pct">70%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="code" data-description="Unix shell scripting and automation">
+            <div class="sc-accent code-accent"></div>
+            <div class="sc-header"><img src="./assets/images/bash.svg" alt="Bash" class="sc-icon"><div class="sc-badge sc-badge--code">CODE</div></div>
+            <div class="sc-name">BASH</div>
+            <div class="sc-desc">Shell scripting &amp; automation</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill code-fill" data-width="80%"></div></div><span class="sc-pct">80%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="code" data-description="Task automation for Windows environments">
+            <div class="sc-accent code-accent"></div>
+            <div class="sc-header"><img src="./assets/images/powershell.svg" alt="PowerShell" class="sc-icon"><div class="sc-badge sc-badge--code">CODE</div></div>
+            <div class="sc-name">POWERSHELL</div>
+            <div class="sc-desc">Windows automation &amp; scripting</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill code-fill" data-width="65%"></div></div><span class="sc-pct">65%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="db" data-description="Relational database management system">
+            <div class="sc-accent db-accent"></div>
+            <div class="sc-header"><img src="./assets/images/mysql.svg" alt="MySQL" class="sc-icon"><div class="sc-badge sc-badge--db">DATABASE</div></div>
+            <div class="sc-name">MYSQL</div>
+            <div class="sc-desc">Relational database management</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill db-fill" data-width="80%"></div></div><span class="sc-pct">80%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="db" data-description="Advanced open-source RDBMS">
+            <div class="sc-accent db-accent"></div>
+            <div class="sc-header"><img src="./assets/images/postgresql.svg" alt="PostgreSQL" class="sc-icon"><div class="sc-badge sc-badge--db">DATABASE</div></div>
+            <div class="sc-name">POSTGRESQL</div>
+            <div class="sc-desc">Advanced open-source RDBMS</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill db-fill" data-width="65%"></div></div><span class="sc-pct">65%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="db" data-description="NoSQL document database">
+            <div class="sc-accent db-accent"></div>
+            <div class="sc-header"><img src="./assets/images/mongo.svg" alt="MongoDB" class="sc-icon"><div class="sc-badge sc-badge--db">DATABASE</div></div>
+            <div class="sc-name">MONGODB</div>
+            <div class="sc-desc">NoSQL document database</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill db-fill" data-width="75%"></div></div><span class="sc-pct">75%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="os" data-description="Microsoft operating system">
+            <div class="sc-accent os-accent"></div>
+            <div class="sc-header"><img src="./assets/images/windows.png" alt="Windows" class="sc-icon"><div class="sc-badge sc-badge--os">OS</div></div>
+            <div class="sc-name">WINDOWS</div>
+            <div class="sc-desc">Microsoft operating system</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill os-fill" data-width="90%"></div></div><span class="sc-pct">90%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="os" data-description="Linux distribution for development">
+            <div class="sc-accent os-accent"></div>
+            <div class="sc-header"><img src="./assets/images/ubuntu.svg" alt="Ubuntu" class="sc-icon"><div class="sc-badge sc-badge--os">OS</div></div>
+            <div class="sc-name">UBUNTU</div>
+            <div class="sc-desc">Linux dev environment</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill os-fill" data-width="85%"></div></div><span class="sc-pct">85%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="os" data-description="Penetration testing Linux distribution">
+            <div class="sc-accent os-accent"></div>
+            <div class="sc-header"><img src="./assets/images/kali.svg" alt="Kali Linux" class="sc-icon"><div class="sc-badge sc-badge--os">OS</div></div>
+            <div class="sc-name">KALI LINUX</div>
+            <div class="sc-desc">Pentesting Linux distro</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill os-fill" data-width="88%"></div></div><span class="sc-pct">88%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="other" data-description="Open-source hardware platform for IoT projects">
+            <div class="sc-accent other-accent"></div>
+            <div class="sc-header"><img src="./assets/images/arduino.svg" alt="Arduino" class="sc-icon"><div class="sc-badge sc-badge--other">HARDWARE</div></div>
+            <div class="sc-name">ARDUINO</div>
+            <div class="sc-desc">Embedded systems &amp; IoT</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill other-fill" data-width="70%"></div></div><span class="sc-pct">70%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="other" data-description="Version control and code collaboration">
+            <div class="sc-accent other-accent"></div>
+            <div class="sc-header"><img src="./assets/images/github.svg" alt="GitHub" class="sc-icon"><div class="sc-badge sc-badge--other">VCS</div></div>
+            <div class="sc-name">GIT &amp; GITHUB</div>
+            <div class="sc-desc">Version control &amp; collaboration</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill other-fill" data-width="85%"></div></div><span class="sc-pct">85%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="other" data-description="Collaborative UI/UX prototyping tool">
+            <div class="sc-accent other-accent"></div>
+            <div class="sc-header"><img src="./assets/images/Figma.svg" alt="Figma" class="sc-icon"><div class="sc-badge sc-badge--other">DESIGN</div></div>
+            <div class="sc-name">FIGMA</div>
+            <div class="sc-desc">UI/UX prototyping</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill other-fill" data-width="90%"></div></div><span class="sc-pct">90%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="other" data-description="Online design tool for graphics">
+            <div class="sc-accent other-accent"></div>
+            <div class="sc-header"><img src="./assets/images/Canva.svg" alt="Canva" class="sc-icon"><div class="sc-badge sc-badge--other">DESIGN</div></div>
+            <div class="sc-name">CANVA</div>
+            <div class="sc-desc">Visual design &amp; graphics</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill other-fill" data-width="90%"></div></div><span class="sc-pct">90%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="other" data-description="Professional image editing and digital art">
+            <div class="sc-accent other-accent"></div>
+            <div class="sc-header"><img src="./assets/images/Photoshop.svg" alt="Photoshop" class="sc-icon"><div class="sc-badge sc-badge--other">DESIGN</div></div>
+            <div class="sc-name">ADOBE PHOTOSHOP</div>
+            <div class="sc-desc">Image editing &amp; digital art</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill other-fill" data-width="90%"></div></div><span class="sc-pct">90%</span></div>
+          </div>
+
+          <div class="skill-card" data-cat="other" data-description="Photo editing and enhancements">
+            <div class="sc-accent other-accent"></div>
+            <div class="sc-header"><img src="./assets/images/Lightroom.png" alt="Lightroom" class="sc-icon"><div class="sc-badge sc-badge--other">DESIGN</div></div>
+            <div class="sc-name">ADOBE LIGHTROOM</div>
+            <div class="sc-desc">Photo editing &amp; enhancements</div>
+            <div class="sc-bar-wrap"><div class="sc-bar"><div class="sc-fill other-fill" data-width="90%"></div></div><span class="sc-pct">90%</span></div>
+          </div>
+
+        </div>
+
+        <div class="soft-skills-section fade-in-up">
+          <div class="ss-header">// SOFT_SKILLS.exe</div>
+          <div class="soft-skills-list">
+            <div class="soft-skill-badge"><span class="ss-icon">&gt;_</span><span>COMMUNICATION</span></div>
+            <div class="soft-skill-badge"><span class="ss-icon">&gt;_</span><span>LEADERSHIP</span></div>
+            <div class="soft-skill-badge"><span class="ss-icon">&gt;_</span><span>TEAMWORK</span></div>
+            <div class="soft-skill-badge"><span class="ss-icon">&gt;_</span><span>STRATEGIC THINKING</span></div>
+            <div class="soft-skill-badge"><span class="ss-icon">&gt;_</span><span>PROBLEM SOLVING</span></div>
+            <div class="soft-skill-badge"><span class="ss-icon">&gt;_</span><span>ADAPTABILITY</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <div class="section-tag">04 / OPS</div>
+          <h2 class="section-title">FEATURED_PROJECTS</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">Projects Arsenal</p>
+        </div>
+        <div class="projects-grid fade-in-up">
+          <div class="project-card project--completed"><h3 class="project-title">FILE ENCRYPTION SYSTEM</h3><p class="project-description">Linux-based security framework enforcing two-factor authentication (TOTP) for file encryption and decryption using AES-256. Access is granted only when both cryptographic keys and time-synchronized OTPs are validated.</p><div class="project-tech-stack"><span class="tech-badge">Bash</span><span class="tech-badge">AES-256</span><span class="tech-badge">TOTP</span><span class="tech-badge">Linux Security</span></div><div class="project-actions"><a href="https://github.com/ROSHAN-Z89/2-Factor-Authentication-System" class="github-link" target="_blank" rel="noopener noreferrer">VIEW CODE</a></div></div>
+          <div class="project-card project--completed"><h3 class="project-title">VULNERABILITY SEEKER</h3><p class="project-description">Python-based TCP and UDP vulnerability assessment tool that performs banner grabbing, subnet scanning, and signature-based detection of misconfigured or outdated network services using a local vulnerability database.</p><div class="project-tech-stack"><span class="tech-badge">Python</span><span class="tech-badge">Network Security</span><span class="tech-badge">TCP/UDP Scanning</span><span class="tech-badge">Vulnerability Assessment</span></div><div class="project-actions"><a href="https://github.com/ROSHAN-Z89/Vulnerability-Assessment" class="github-link" target="_blank" rel="noopener noreferrer">VIEW CODE</a></div></div>
+          <div class="project-card project--completed"><h3 class="project-title">URL SECURITY ANALYZER</h3><p class="project-description">Advanced Python-based security tool for analyzing and validating URLs, detecting potential threats, SSRF vulnerabilities, and suspicious schemes with comprehensive reporting capabilities.</p><div class="project-tech-stack"><span class="tech-badge">Python</span><span class="tech-badge">Security</span><span class="tech-badge">OSINT</span><span class="tech-badge">API Integration</span></div><div class="project-actions"><a href="https://github.com/ROSHAN-Z89/URL_ANALYZER" class="github-link" target="_blank" rel="noopener noreferrer">VIEW CODE</a></div></div>
+          <div class="project-card project--completed"><h3 class="project-title">PORTFOLIO WEBSITE</h3><p class="project-description">Personal portfolio website showcasing cybersecurity projects, technical skills, and professional profile. Features terminal loader animations, interactive skills section, and responsive design.</p><div class="project-tech-stack"><span class="tech-badge">HTML</span><span class="tech-badge">CSS</span><span class="tech-badge">JavaScript</span></div><div class="project-actions"><a href="https://github.com/ROSHAN-Z89/Portfolio" class="github-link" target="_blank" rel="noopener noreferrer">VIEW CODE</a></div></div>
+          <div class="project-card project--completed"><h3 class="project-title">KEYLOGGER</h3><p class="project-description">Lightweight Python-based security tool for capturing and logging keystrokes, built to demonstrate input monitoring techniques and strengthen ethical cybersecurity research skills.</p><div class="project-tech-stack"><span class="tech-badge">Python</span><span class="tech-badge">Security</span><span class="tech-badge">Keylogger</span><span class="tech-badge">Monitoring</span></div><div class="project-actions"><a href="https://github.com/ROSHAN-Z89/Keylogger" class="github-link" target="_blank" rel="noopener noreferrer">VIEW CODE</a></div></div>
+          <div class="project-card project--completed"><h3 class="project-title">PASSWORD GENERATOR</h3><p class="project-description">Python tool for generating strong, customizable, and secure passwords with randomness and user-defined rules.</p><div class="project-tech-stack"><span class="tech-badge">Python</span><span class="tech-badge">Security</span><span class="tech-badge">Password Generation</span><span class="tech-badge">Encryption</span></div><div class="project-actions"><a href="https://github.com/ROSHAN-Z89/PassGenerator" class="github-link" target="_blank" rel="noopener noreferrer">VIEW CODE</a></div></div>
+          <div class="project-card project--completed"><h3 class="project-title">ARDUINO OBJECT SENSOR</h3><p class="project-description">Arduino-based embedded system utilizing IR sensors for accurate object detection and proximity sensing, capable of triggering automated responses in real-time applications.</p><div class="project-tech-stack"><span class="tech-badge">Arduino</span><span class="tech-badge">Embedded Systems</span><span class="tech-badge">IR Sensor</span><span class="tech-badge">Object Detection</span></div><div class="project-actions"><a href="https://github.com/ROSHAN-Z89/IOT" class="github-link" target="_blank" rel="noopener noreferrer">VIEW CODE</a></div></div>
+          <div class="project-card project--completed"><h3 class="project-title">PORT SCANNER</h3><p class="project-description">Python-based tool for scanning target systems to identify open ports and running services, enabling network security assessment and vulnerability detection in real-time environments.</p><div class="project-tech-stack"><span class="tech-badge">Python</span><span class="tech-badge">Networking</span><span class="tech-badge">Security</span><span class="tech-badge">Port Scanning</span></div><div class="project-actions"><a href="https://github.com/ROSHAN-Z89/Port-Scanner" class="github-link" target="_blank" rel="noopener noreferrer">VIEW CODE</a></div></div>
+          <div class="project-card project--completed"><h3 class="project-title">TO-DO LIST</h3><p class="project-description">Interactive web application to manage daily tasks efficiently, featuring task creation, editing, completion tracking, and persistent storage for organized workflow.</p><div class="project-tech-stack"><span class="tech-badge">HTML</span><span class="tech-badge">CSS</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Web App</span></div><div class="project-actions"><a href="https://github.com/ROSHAN-Z89/To-Do-List" class="github-link" target="_blank" rel="noopener noreferrer">VIEW CODE</a></div></div>
+          <div class="project-card project--completed"><h3 class="project-title">CALCULATOR</h3><p class="project-description">Simple yet functional calculator application supporting basic arithmetic operations, designed with a clean UI for quick and accurate calculations.</p><div class="project-tech-stack"><span class="tech-badge">HTML</span><span class="tech-badge">CSS</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Web App</span></div><div class="project-actions"><a href="https://github.com/ROSHAN-Z89/Calculator" class="github-link" target="_blank" rel="noopener noreferrer">VIEW CODE</a></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog" class="section">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <div class="section-tag">05 / INTEL</div>
+          <h2 class="section-title">CYBERSECURITY_BLOGS</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">Latest insights on security research and vulnerability analysis</p>
+        </div>
+        <div class="blog-grid fade-in-up">
+          <article class="blog-card"><div class="blog-image"><img src="assets/banner/proxy.webp" alt="proxy and proxy server explained" loading="lazy"><div class="blog-category">PROXY - ALL YOU NEED TO KNOW</div></div><div class="blog-content"><h3 class="blog-title">Proxy - All You Need to Know</h3><p class="blog-description">Discover how proxies work, the difference between a proxy and a proxy server, and why they're essential for online privacy and security. Learn about types of proxies and how they keep your IP hidden while browsing.</p><div class="blog-meta"><span class="blog-date">Published on Hashnode</span><span class="blog-readtime">5 min read</span></div><a href="https://rootiq.hashnode.dev/proxy-all-you-need-to-know" target="_blank" rel="noopener noreferrer" class="read-more-btn"><span>READ_MORE</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"></path><path d="M7 7H17V17"></path></svg></a></div></article>
+          <article class="blog-card"><div class="blog-image"><img src="assets/banner/supplychainattack.webp" alt="npm Supply Chain Attack" loading="lazy"><div class="blog-category">SUPPLY CHAIN ATTACK</div></div><div class="blog-content"><h3 class="blog-title">npm Supply Chain Attack - Shai-Hulud Worm</h3><p class="blog-description">A look at the September 2025 npm supply chain attack, where phishing led to compromised maintainer accounts and malicious updates to popular libraries like <em>debug</em>, <em>chalk</em>, and <em>ansi-styles</em>.</p><div class="blog-meta"><span class="blog-date">Published on Hashnode</span><span class="blog-readtime">3 min read</span></div><a href="https://rootiq.hashnode.dev/supply-chain-attack" target="_blank" rel="noopener noreferrer" class="read-more-btn"><span>READ_MORE</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"></path><path d="M7 7H17V17"></path></svg></a></div></article>
+          <article class="blog-card"><div class="blog-image"><img src="assets/banner/databreach.jpg" alt="Data Breach at Google" loading="lazy"><div class="blog-category">DATA BREACH</div></div><div class="blog-content"><h3 class="blog-title">Data Breach at Google - ShinyHunters Strike Again</h3><p class="blog-description">An in-depth analysis of the recent Google data breach orchestrated by the notorious ShinyHunters group. Examining the attack vectors, impact assessment, and security implications for enterprise organizations worldwide.</p><div class="blog-meta"><span class="blog-date">Published on Hashnode</span><span class="blog-readtime">5 min read</span></div><a href="https://rootiq.hashnode.dev/data-breach-at-google-shinyhunters-strike-again" target="_blank" rel="noopener noreferrer" class="read-more-btn"><span>READ_MORE</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"></path><path d="M7 7H17V17"></path></svg></a></div></article>
+          <article class="blog-card"><div class="blog-image"><img src="assets/banner/CWE787.webp" alt="CWE-787" loading="lazy"><div class="blog-category">VULNERABILITY</div></div><div class="blog-content"><h3 class="blog-title">Lessons from CWE-787: Out-of-Bounds Write &amp; Why It's Important</h3><p class="blog-description">Deep dive into CWE-787 vulnerabilities, exploring out-of-bounds write attacks, memory corruption techniques, and essential mitigation strategies for secure software development practices.</p><div class="blog-meta"><span class="blog-date">Published on Hashnode</span><span class="blog-readtime">8 min read</span></div><a href="https://rootiq.hashnode.dev/httpsrootiqhashnodedevout-of-bound-write" target="_blank" rel="noopener noreferrer" class="read-more-btn"><span>READ_MORE</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"></path><path d="M7 7H17V17"></path></svg></a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <div class="section-tag">06 / CONNECT</div>
+          <h2 class="section-title">GET_IN_TOUCH</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">Ready to collaborate on cybersecurity projects</p>
+        </div>
+        <div class="contact-grid fade-in-up">
+          <div class="contact-card">
+            <div class="contact-header"><h3>SEND_MESSAGE</h3><p>Interested in cybersecurity collaboration, freelance projects, or full-time opportunities? Let's connect!</p></div>
+            <form class="contact-form" id="contact-form">
+              <div class="form-row">
+                <div class="form-group"><label for="contact-name">FULL NAME</label><input type="text" id="contact-name" name="name" required placeholder="Enter your full name"></div>
+                <div class="form-group"><label for="contact-email">EMAIL ADDRESS</label><input type="email" id="contact-email" name="email" required placeholder="rouson.ece@gmail.com"></div>
+              </div>
+              <div class="form-group"><label for="contact-subject">SUBJECT</label><select id="contact-subject" name="subject" required><option value="">Select a subject...</option><option value="freelance">Freelance Security Project</option><option value="full-time">Full-time Opportunity</option><option value="consultation">Security Consultation</option><option value="collaboration">Research Collaboration</option><option value="other">Other</option></select></div>
+              <div class="form-group"><label for="contact-message">MESSAGE</label><textarea id="contact-message" name="message" rows="6" required placeholder="Tell me about your security project or inquiry..."></textarea></div>
+              <div class="form-actions"><button type="submit" class="btn-contact cta-button"><span>SEND_MSG</span></button></div>
+            </form>
+          </div>
+          <div class="contact-info">
+            <div class="contact-header"><h3>CONTACT_INFORMATION</h3><p>Professional channels to reach me for secure communications.</p></div>
+            <div class="contact-details">
+              <a href="/cdn-cgi/l/email-protection#89fbe6fcfae6e7a7eceaecc9eee4e8e0e5a7eae6e4" target="_blank" rel="noopener noreferrer" class="contact-detail-item"><img src="./assets/socials/mail.svg" alt="Email" class="detail-icon"><div class="detail-content"><h4>EMAIL</h4><p><span class="__cf_email__" data-cfemail="33415c46405c5d1d56505673545e525a5f1d505c5e">[email&#160;protected]</span></p><small>Primary communication channel</small></div></a>
+              <a href="https://linkedin.com/in/rouson-das-563b52284" target="_blank" rel="noopener noreferrer" class="contact-detail-item"><img src="./assets/socials/linkedin.svg" alt="LinkedIn" class="detail-icon"><div class="detail-content"><h4>LINKEDIN</h4><p>rouson-das-563b52284</p><small>Professional networking</small></div></a>
+              <a href="https://github.com/ROSHAN-Z89" target="_blank" rel="noopener noreferrer" class="contact-detail-item"><img src="./assets/socials/github.svg" alt="GitHub" class="detail-icon"><div class="detail-content"><h4>GITHUB</h4><p>ROSHAN-Z89</p><small>Open source projects</small></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="floating-contact" id="floating-contact" title="Contact Me"><img src="./assets/images/message.svg" alt="Message" /></div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-layout">
+        <div class="social-links">
+          <a href="https://mail.google.com/mail/?view=cm&to=rouson.ece@gmail.com" class="social-link" title="Email"><img src="./assets/socials/mail.svg" alt="Email"></a>
+          <a href="https://linkedin.com/in/rouson-das-563b52284" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn"><img src="./assets/socials/linkedin.svg" alt="LinkedIn"></a>
+          <a href="https://github.com/ROSHAN-Z89" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub"><img src="./assets/socials/github.svg" alt="GitHub"></a>
+        </div>
+        <p class="copyright">&#169; 2025 Rouson Das. All rights reserved.</p>
+        <div class="spacer"></div>
+      </div>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+  <script>
+  // NAV CLOCK
+  (function(){
+    function tick(){const n=new Date(),t=[n.getHours(),n.getMinutes(),n.getSeconds()].map(v=>String(v).padStart(2,'0')).join(':');const e=document.getElementById('nav-clock');if(e)e.textContent=t;}
+    setInterval(tick,1000);tick();
+  })();
+
+  // SCROLL PROGRESS
+  window.addEventListener('scroll',function(){
+    const p=document.getElementById('nav-progress');
+    if(!p)return;
+    const pct=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;
+    p.style.width=pct+'%';
+  },{passive:true});
+
+  // ARSENAL TABS + BARS + STATS
+  document.addEventListener('DOMContentLoaded',function(){
+    // tabs
+    var tabs=document.querySelectorAll('.atab');
+    var cards=document.querySelectorAll('.skill-card');
+    tabs.forEach(function(tab){
+      tab.addEventListener('click',function(){
+        tabs.forEach(function(t){t.classList.remove('active');});
+        tab.classList.add('active');
+        var cat=tab.dataset.cat;
+        cards.forEach(function(card){
+          if(cat==='all'||card.dataset.cat===cat){card.style.display='';}
+          else{card.style.display='none';}
+        });
+        setTimeout(function(){
+          document.querySelectorAll('.skill-card:not([style*="none"]) .sc-fill').forEach(function(b){b.style.width=b.dataset.width||'0%';});
+        },80);
+      });
+    });
+
+    // initial bar animation
+    setTimeout(function(){
+      document.querySelectorAll('.sc-fill').forEach(function(b){b.style.width=b.dataset.width||'0%';});
+    },500);
+
+    // stat counters — trigger on about section
+    function runCounters(){
+      document.querySelectorAll('.stat-num').forEach(function(el){
+        var target=parseInt(el.dataset.target)||0;
+        var cur=0;var step=Math.max(1,Math.ceil(target/25));
+        var iv=setInterval(function(){
+          cur=Math.min(cur+step,target);
+          el.textContent=cur+(target>=10?'+':'');
+          if(cur>=target) clearInterval(iv);
+        },60);
+      });
+    }
+    var counted=false;
+    document.addEventListener('sectionChanged',function(e){
+      if(e.detail==='about'&&!counted){counted=true;runCounters();}
+    });
+  });
+  </script>
+
 </body>
-
 </html>
-

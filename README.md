@@ -1,4 +1,4 @@
-# 🌐 Rouson Das — Cybersecurity Portfolio
+# Portfolio
 
 Welcome to my personal cybersecurity portfolio — a fast, minimal, hacker-aesthetic site that showcases my skills, projects, and research in **Ethical Hacking**, **Penetration Testing**, **Network Security**, and **Bug Hunting**.
 

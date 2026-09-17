@@ -235,9 +235,9 @@ class HeroTyper {
     this.phraseIndex = 0;
     this.charIndex = 0;
     this.isDeleting = false;
-    this.typeSpeed = 50;
-    this.deleteSpeed = 25;
-    this.pauseEnd = 2200;
+    this.typeSpeed = 75;
+    this.deleteSpeed = 35;
+    this.pauseEnd = 4000;
     this.init();
   }
 
